@@ -1,0 +1,14 @@
+<h1>Cross Site Scripting - Example 3 </h1>
+<h3>Cross Site Scripting - in html_safe </h3>
+<h4>Paramter is xss</h4>
+
+
+
+	<% params[:name] %>
+	<%= "<a>#{params}</a>".html_safe %>
+
+
+
+
+
+	

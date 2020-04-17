@@ -1,0 +1,16 @@
+<br><br><br><br><br><br><br><br>
+
+<%= link_to "External link", "#{@reverse}", :target => "_blank" %>
+
+Not Working but the exploit is something like:
+
+1- http://127.0.0.1:3000/example20?url=http://61f9ed08.ngrok.io/404.html
+you redirect the user to 404 page that contains
+
+window.opener.location.assign('http://61f9ed08.ngrok.io/index.html');
+
+window.opener.location.assign (it assings another URL to the one from which LINK was opened)
+
+Now on clicking on go back on the tab http://127.0.0.1:3000/example20?url=http://61f9ed08.ngrok.io/404.html it will take you to the expoit page that is index.html page.
+
+

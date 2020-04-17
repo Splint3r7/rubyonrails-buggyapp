@@ -1,0 +1,140 @@
+Searching 1060 files for "MD5"
+
+/Users/hassankhan/test/simpleblog/app/controllers/example23_controller.rb:
+    1  class Example23Controller < ApplicationController
+    2: 	def md5hacking
+    3: 		@token = Digest::MD5.hexdigest(SecureRandom.uuid)
+    4  		@token2 = JWT.encode("Hassan")
+    5  	end
+
+/Users/hassankhan/test/simpleblog/config/routes.rb:
+   31    get '/example21', to: "example21#FileAcess2"
+   32    get '/example22', to: "example22#cross_site_scripting22"
+   33:   get '/example23', to: "example23#md5hacking"
+   34    get '/jwtplaying', to: "jwtplaying#jwtplaying"
+   35   
+
+/Users/hassankhan/test/simpleblog/log/development.log:
+    <binary>
+
+/Users/hassankhan/test/simpleblog/tmp/cache/bootsnap-load-path-cache:
+    <binary>
+
+78 matches across 4 files
+
+
+Searching 1060 files for "uuid"
+
+/Users/hassankhan/test/simpleblog/app/controllers/example21_controller.rb:
+   11  		#@payload_1337 = Rails.root+ender+payload
+   12  		#@path = var.join(ender).join(payload)
+   13: 		#id = SecureRandom.uuid
+   14  		#File.link(path, "public/#{id}")
+   15  		#redirect_to "/#{id}"
+
+/Users/hassankhan/test/simpleblog/app/controllers/example23_controller.rb:
+    1  class Example23Controller < ApplicationController
+    2  	def md5hacking
+    3: 		@token = Digest::MD5.hexdigest(SecureRandom.uuid)
+    4  		@token_notsecure = Digest::MD5.hexdigest("14567")
+    5  		#ee@token2 = JWT.encode("Hassan")
+
+/Users/hassankhan/test/simpleblog/app/controllers/example9_controller.rb:
+    6  		payload = params[:payload]
+    7  		path = Rails.root.join(payload)
+    8: 		id = SecureRandom.uuid
+    9  		File.link(path, "public/#{id}")
+   10  		redirect_to "/#{id}"
+
+/Users/hassankhan/test/simpleblog/app/controllers/jwtplaying_controller.rb:
+    1  class JwtplayingController < ApplicationController
+    2  	#@encoded = JsonWebToken.encode()
+    3: 	@encoded = SecureRandom.uuid
+    4  end
+    5  
+
+/Users/hassankhan/test/simpleblog/log/development.log:
+    <binary>
+
+/Users/hassankhan/test/simpleblog/tmp/cache/bootsnap-load-path-cache:
+    <binary>
+
+10 matches across 6 files
+
+
+Searching 1060 files for "uuid"
+
+/Users/hassankhan/test/simpleblog/app/controllers/example21_controller.rb:
+   11  		#@payload_1337 = Rails.root+ender+payload
+   12  		#@path = var.join(ender).join(payload)
+   13: 		#id = SecureRandom.uuid
+   14  		#File.link(path, "public/#{id}")
+   15  		#redirect_to "/#{id}"
+
+/Users/hassankhan/test/simpleblog/app/controllers/example23_controller.rb:
+    1  class Example23Controller < ApplicationController
+    2  	def md5hacking
+    3: 		@token = Digest::MD5.hexdigest(SecureRandom.uuid)
+    4  		@token_notsecure = Digest::MD5.hexdigest("14567")
+    5  		#ee@token2 = JWT.encode("Hassan")
+
+/Users/hassankhan/test/simpleblog/app/controllers/example9_controller.rb:
+    6  		payload = params[:payload]
+    7  		path = Rails.root.join(payload)
+    8: 		id = SecureRandom.uuid
+    9  		File.link(path, "public/#{id}")
+   10  		redirect_to "/#{id}"
+
+/Users/hassankhan/test/simpleblog/app/controllers/jwtplaying_controller.rb:
+    1  class JwtplayingController < ApplicationController
+    2  	#@encoded = JsonWebToken.encode()
+    3: 	@encoded = SecureRandom.uuid
+    4  end
+    5  
+
+/Users/hassankhan/test/simpleblog/log/development.log:
+    <binary>
+
+/Users/hassankhan/test/simpleblog/tmp/cache/bootsnap-load-path-cache:
+    <binary>
+
+10 matches across 6 files
+
+
+Searching 1060 files for "uuid"
+
+/Users/hassankhan/test/simpleblog/app/controllers/example21_controller.rb:
+   11  		#@payload_1337 = Rails.root+ender+payload
+   12  		#@path = var.join(ender).join(payload)
+   13: 		id = SecureRandom.uuid
+   14  		#File.link(path, "public/#{id}")
+   15  		#redirect_to "/#{id}"
+
+/Users/hassankhan/test/simpleblog/app/controllers/example23_controller.rb:
+    1  class Example23Controller < ApplicationController
+    2  	def md5hacking
+    3: 		@token = Digest::MD5.hexdigest(SecureRandom.uuid)
+    4  		@token_notsecure = Digest::MD5.hexdigest("14567")
+    5  		#ee@token2 = JWT.encode("Hassan")
+
+/Users/hassankhan/test/simpleblog/app/controllers/example9_controller.rb:
+    6  		payload = params[:payload]
+    7  		path = Rails.root.join(payload)
+    8: 		id = SecureRandom.uuid
+    9  		File.link(path, "public/#{id}")
+   10  		redirect_to "/#{id}"
+
+/Users/hassankhan/test/simpleblog/app/controllers/jwtplaying_controller.rb:
+    1  class JwtplayingController < ApplicationController
+    2  	#@encoded = JsonWebToken.encode()
+    3: 	@encoded = SecureRandom.uuid
+    4  end
+    5  
+
+/Users/hassankhan/test/simpleblog/log/development.log:
+    <binary>
+
+/Users/hassankhan/test/simpleblog/tmp/cache/bootsnap-load-path-cache:
+    <binary>
+
+10 matches across 6 files

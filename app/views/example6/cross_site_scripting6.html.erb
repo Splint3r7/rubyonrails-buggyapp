@@ -1,0 +1,14 @@
+<h1>Cross Site Scripting - full_sanitizer</h1>
+
+
+
+<% full_sanitizer = Rails::Html::FullSanitizer.new %>
+
+
+<% link_sanitizer = Rails::Html::LinkSanitizer.new %>
+
+<%= full_sanitizer.sanitize(params[:name]) %>
+<%= sanitize params[:name2] %>
+
+
+<%= CGI::unescapeHTML(full_sanitizer.sanitize(params[:name_xss])) %>

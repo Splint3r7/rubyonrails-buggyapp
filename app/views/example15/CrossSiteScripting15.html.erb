@@ -1,0 +1,9 @@
+<br><br><br><br><br><br><br>
+
+<h6>Used to_json which saved from the XSS</h6>
+@ https://dzone.com/articles/preventing-xss-vulnerabilities-when-developing-rub
+
+<% message = params[:name].to_s.html_safe %>
+<script>
+	var msg = "<%= raw(message).to_json.html_safe %>";
+</script>>

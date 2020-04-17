@@ -1,0 +1,15 @@
+##
+# Host Database
+#
+# localhost is used to configure the loopback interface
+# when the system is booting.  Do not change this entry.
+##
+127.0.0.1	xss.splint3r7.com
+127.0.0.1	localhost
+10.10.10.125	QUERIER.HTB.LOCAL
+255.255.255.255	broadcasthost
+69.84.135.29	images.lider.cl
+::1             localhost
+# BEGIN section for OpenVPN Client SSL sites
+127.94.0.1	client.openvpn.net
+# END section for OpenVPN Client SSL sites

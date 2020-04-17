@@ -1,0 +1,13 @@
+<br><br>
+<br>
+<h1>Sqli2 Test Posts</h1>
+
+<% @post.each do |fad| %>
+	<div class="container">
+	<div class="well">
+		<p><%= fad.body %></p>
+		<p><%= link_to 'Read More', post_path(fad), :class => 'btn btn-info' %></p>
+	</div>
+	</div>
+
+<% end %>

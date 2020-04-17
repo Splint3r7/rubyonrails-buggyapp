@@ -1,0 +1,17 @@
+</br></br></br></br></br></br>
+<% (1..2).each do |i| %>
+	<%= SecureRandom::urlsafe_base64(6).tr('_-', '') %>
+</br>
+<% end %>
+
+
+<%= CGI::unescapeHTML(params[:xss2]) %>
+
+<script>
+	var test = "<%= raw escape_javascript(params[:test2]) %>"
+	//var test = "<%= raw params[:test2] %>"
+
+	var test2 = "<%= params[:test3] %>"
+</script>
+
+

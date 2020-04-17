@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<br><br><br><br><br><br><br><br><br><br>
+<html>
+
+<head>
+  <link data-require="sweet-alert@*" data-semver="0.4.2" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css" />
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+
+<body>
+  <form id="from1">
+    <button>Save</button>
+  </form>
+
+  <script>
+    document.querySelector('#from1').addEventListener('submit', function(e) {
+      var form = this;
+      
+      e.preventDefault();
+      
+      swal({
+          title: "<h1><%= raw params[:text] %></h1>",
+          text: "<%= raw params[:text2] %>",
+          icon: "warning",
+          buttons: [
+            'No, cancel it!',
+            'Yes, I am sure!'
+          ],
+          dangerMode: true,
+        }).then(function(isConfirm) {
+          if (isConfirm) {
+            swal({
+              title: 'Shortlisted!',
+              text: 'Candidates are successfully shortlisted!',
+              icon: 'success'
+            }).then(function() {
+              form.submit();
+            });
+          } else {
+            swal("Cancelled", "Your imaginary file is safe :)", "error");
+          }
+        });
+    });
+  </script>
+  
+  <style>
+    .swal-button--confirm {
+      background-color: #DD6B55;
+    }
+  </style>
+</body>
+
+<p> Resources:
+	@ https://www.codeproject.com/Questions/1205624/Swal-alert-open-big-popup-then-screen
+	@ https://faze11.github.io/sweetalert/
+	@ http://next.plnkr.co/edit/YTY7PDs5Uh1XGUo9ic1s?p=preview&utm_source=legacy&utm_medium=worker&utm_campaign=next&preview
+	 </p>
+
+</html>

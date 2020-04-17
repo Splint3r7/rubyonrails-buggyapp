@@ -1,0 +1,10 @@
+
+<h1>Cross site Scripting Challange 7 - Black listing</h1>
+<p>Parameter is xss</p>
+
+<% scrubber = Rails::Html::TargetScrubber.new %>
+<% scrubber.tags = ['img'] %>
+
+<% html_fragment = Loofah.fragment(params[:xss]) %>
+<% html_fragment.scrub!(scrubber) %>
+<%= raw html_fragment.to_s %>
