@@ -7,7 +7,6 @@ jobs:
       - image: circleci/ruby:2.5
     steps:
       - checkout
-      - bin/setup # setup application
       - run:
           name: Install Bundler-audit
           command: gem install bundler-audit
