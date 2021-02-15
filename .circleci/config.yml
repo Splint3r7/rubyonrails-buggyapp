@@ -1,13 +1,16 @@
-version: 2.1
-orbs:
-  ruby: circleci/ruby@0.1.2 
-  ruby-linter: amyroi/ruby-linter@1.0.1
-
+version: 2
 jobs:
   build:
+    # your 'build' configurations here
+  security:
     docker:
-      - image: 'circleci/ruby:2.6.3'
+      - image: circleci/ruby:2.5
     steps:
       - checkout
-      - ruby-linter/brakeman:
-          parallel: true
+      - bin/setup # setup application
+      - run:
+          name: Install Bundler-audit
+          command: gem install bundler-audit
+      - run:
+          name: Run Bundle-audit
+          command: bundle exec bundle audit check --update
