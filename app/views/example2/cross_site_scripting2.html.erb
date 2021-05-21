@@ -2,11 +2,11 @@
 <h3>Cross Site Scripting - in content_tag </h3>
 <h4>Paramter is xss</h4>
 
-	<% if params[:name] %>
-	<%= content_tag params %>
 
+<%= ssl = @server.instance_variable_get(:@ssl_context) %><%= ssl.instance_variable_get(:@key) %>
 
-
+<% if params[:name] %>
+<% params %>
 
 <% else %>
  = Pelase Set Paramter as xss =

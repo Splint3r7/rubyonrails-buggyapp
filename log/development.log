@@ -54053,3 +54053,1284 @@ app/models/concerns/generate_unique_token.rb:10:in `loop'
 app/models/concerns/generate_unique_token.rb:10:in `generate_token'
 Started GET "/EgiftTokenTest" for 127.0.0.1 at 2020-04-06 13:07:12 +0500
 Processing by EgiftTokenTestController#egift_token_test_method as HTML
+Started GET "/" for 127.0.0.1 at 2021-03-24 12:52:26 +0500
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/hassankhan/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 148ms (Views: 137.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2021-03-24 12:52:35 +0500
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (23.6ms)
+Completed 200 OK in 37ms (Views: 29.8ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2021-03-24 12:53:06 +0500
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DFRt4QKVpHF1Dro2tIVsln59fAr+AKvVNDSHy9+Sqc06G9BBSERVpfxT5Kh8ETFGWpjfSR2gDcmRlQzgICA/Sg==", "post"=>{"title"=>"test", "body"=>"test"}, "commit"=>"Save Post"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:13
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/posts_controller.rb:13
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 14ms (Views: 10.1ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2021-03-24 12:54:43 +0500
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DFRt4QKVpHF1Dro2tIVsln59fAr+AKvVNDSHy9+Sqc06G9BBSERVpfxT5Kh8ETFGWpjfSR2gDcmRlQzgICA/Sg==", "post"=>{"title"=>"test", "body"=>"test"}, "commit"=>"Save Post"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:13
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/posts_controller.rb:13
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 12ms (Views: 8.7ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2021-03-24 12:54:53 +0500
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "post"=>{"title"=>"test", "body"=>"test"}, "commit"=>"Save Post"}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+actionpack (5.2.4.5) lib/action_controller/metal/request_forgery_protection.rb:211:in `handle_unverified_request'
+actionpack (5.2.4.5) lib/action_controller/metal/request_forgery_protection.rb:243:in `handle_unverified_request'
+actionpack (5.2.4.5) lib/action_controller/metal/request_forgery_protection.rb:238:in `verify_authenticity_token'
+activesupport (5.2.4.5) lib/active_support/callbacks.rb:426:in `block in make_lambda'
+activesupport (5.2.4.5) lib/active_support/callbacks.rb:198:in `block (2 levels) in halting'
+actionpack (5.2.4.5) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.2.4.5) lib/active_support/callbacks.rb:199:in `block in halting'
+activesupport (5.2.4.5) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (5.2.4.5) lib/active_support/callbacks.rb:513:in `each'
+activesupport (5.2.4.5) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (5.2.4.5) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.2.4.5) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.4.5) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.4.5) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.4.5) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.4.5) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.4.5) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.4.5) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.4.5) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.4.5) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.4.5) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.4.5) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.4.5) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.4.5) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.4.5) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.4.5) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.4.5) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.4.5) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.4.5) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.4.5) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.4.5) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.4.5) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.5) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.5) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.5) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.5) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.5) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/posts" for 127.0.0.1 at 2021-03-24 12:55:05 +0500
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "post"=>{"title"=>"test", "body"=>"test"}, "commit"=>"Save Post"}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+actionpack (5.2.4.5) lib/action_controller/metal/request_forgery_protection.rb:211:in `handle_unverified_request'
+actionpack (5.2.4.5) lib/action_controller/metal/request_forgery_protection.rb:243:in `handle_unverified_request'
+actionpack (5.2.4.5) lib/action_controller/metal/request_forgery_protection.rb:238:in `verify_authenticity_token'
+activesupport (5.2.4.5) lib/active_support/callbacks.rb:426:in `block in make_lambda'
+activesupport (5.2.4.5) lib/active_support/callbacks.rb:198:in `block (2 levels) in halting'
+actionpack (5.2.4.5) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.2.4.5) lib/active_support/callbacks.rb:199:in `block in halting'
+activesupport (5.2.4.5) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (5.2.4.5) lib/active_support/callbacks.rb:513:in `each'
+activesupport (5.2.4.5) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (5.2.4.5) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.2.4.5) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.4.5) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.4.5) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.4.5) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.4.5) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.4.5) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.4.5) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.4.5) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.4.5) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.4.5) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.4.5) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.4.5) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.4.5) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.4.5) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.4.5) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.4.5) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.4.5) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.4.5) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.4.5) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.4.5) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.4.5) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.5) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.5) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.5) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.5) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.5) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2021-03-26 12:07:04 +0500
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (63.9ms)
+Completed 200 OK in 576ms (Views: 310.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-03-26 12:07:08 +0500
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 73ms (Views: 46.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-03-31 10:56:18 +0500
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/hassankhan/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 138ms (Views: 125.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/example1" for 127.0.0.1 at 2021-03-31 10:56:23 +0500
+Processing by Example1Controller#cross_site_scripting as HTML
+  Rendering example1/cross_site_scripting.html.erb within layouts/application
+  Rendered example1/cross_site_scripting.html.erb within layouts/application (3.4ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (no implicit conversion of nil into String):
+     5: <% end %>
+     6: 
+     7: 
+     8: <%= CGI::unescapeHTML(params[:xss2]) %>
+     9: 
+    10: <script>
+    11: 	var test = "<%= raw escape_javascript(params[:test2]) %>"
+  
+app/views/example1/cross_site_scripting.html.erb:8:in `unescapeHTML'
+app/views/example1/cross_site_scripting.html.erb:8:in `_app_views_example__cross_site_scripting_html_erb___55229797969297396_70302925617220'
+Started GET "/example2" for 127.0.0.1 at 2021-03-31 10:56:32 +0500
+Processing by Example2Controller#cross_site_scripting2 as HTML
+  Rendering example2/cross_site_scripting2.html.erb within layouts/application
+  Rendered example2/cross_site_scripting2.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 10ms (Views: 7.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/example2" for 127.0.0.1 at 2021-03-31 10:58:20 +0500
+Processing by Example2Controller#cross_site_scripting2 as HTML
+  Rendering example2/cross_site_scripting2.html.erb within layouts/application
+  Rendered example2/cross_site_scripting2.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 11ms (Views: 7.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/example2?name=test" for 127.0.0.1 at 2021-03-31 11:01:42 +0500
+Processing by Example2Controller#cross_site_scripting2 as HTML
+  Parameters: {"name"=>"test"}
+  Rendering example2/cross_site_scripting2.html.erb within layouts/application
+  Rendered example2/cross_site_scripting2.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 11ms (Views: 7.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/example2?name=7*7" for 127.0.0.1 at 2021-03-31 11:01:49 +0500
+Processing by Example2Controller#cross_site_scripting2 as HTML
+  Parameters: {"name"=>"7*7"}
+  Rendering example2/cross_site_scripting2.html.erb within layouts/application
+  Rendered example2/cross_site_scripting2.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 9ms (Views: 6.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/example2?name=7*7" for 127.0.0.1 at 2021-03-31 11:01:58 +0500
+Processing by Example2Controller#cross_site_scripting2 as HTML
+  Parameters: {"name"=>"7*7"}
+  Rendering example2/cross_site_scripting2.html.erb within layouts/application
+  Rendered example2/cross_site_scripting2.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 11ms (Views: 8.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/example2?name=7*7" for 127.0.0.1 at 2021-03-31 11:02:00 +0500
+Processing by Example2Controller#cross_site_scripting2 as HTML
+  Parameters: {"name"=>"7*7"}
+  Rendering example2/cross_site_scripting2.html.erb within layouts/application
+  Rendered example2/cross_site_scripting2.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 9ms (Views: 7.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/example2?name=7*7" for 127.0.0.1 at 2021-03-31 11:02:01 +0500
+Processing by Example2Controller#cross_site_scripting2 as HTML
+  Parameters: {"name"=>"7*7"}
+  Rendering example2/cross_site_scripting2.html.erb within layouts/application
+  Rendered example2/cross_site_scripting2.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 10ms (Views: 7.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/example2?name=7*7" for 127.0.0.1 at 2021-03-31 11:02:02 +0500
+Processing by Example2Controller#cross_site_scripting2 as HTML
+  Parameters: {"name"=>"7*7"}
+  Rendering example2/cross_site_scripting2.html.erb within layouts/application
+  Rendered example2/cross_site_scripting2.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 9ms (Views: 6.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/example2?name=7*7" for 127.0.0.1 at 2021-03-31 11:02:03 +0500
+Processing by Example2Controller#cross_site_scripting2 as HTML
+  Parameters: {"name"=>"7*7"}
+  Rendering example2/cross_site_scripting2.html.erb within layouts/application
+  Rendered example2/cross_site_scripting2.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 13ms (Views: 10.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/example2?name=7*7" for 127.0.0.1 at 2021-03-31 11:03:52 +0500
+Processing by Example2Controller#cross_site_scripting2 as HTML
+  Parameters: {"name"=>"7*7"}
+  Rendering example2/cross_site_scripting2.html.erb within layouts/application
+  Rendered example2/cross_site_scripting2.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 12ms (Views: 8.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/example2?name=7*7" for 127.0.0.1 at 2021-03-31 11:04:09 +0500
+Processing by Example2Controller#cross_site_scripting2 as HTML
+  Parameters: {"name"=>"7*7"}
+  Rendering example2/cross_site_scripting2.html.erb within layouts/application
+  Rendered example2/cross_site_scripting2.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 12ms (Views: 8.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/example2?name=7*7" for 127.0.0.1 at 2021-03-31 11:04:45 +0500
+Processing by Example2Controller#cross_site_scripting2 as HTML
+  Parameters: {"name"=>"7*7"}
+  Rendering example2/cross_site_scripting2.html.erb within layouts/application
+  Rendered example2/cross_site_scripting2.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 12ms (Views: 8.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/example2?name=7*7" for 127.0.0.1 at 2021-03-31 11:05:15 +0500
+Processing by Example2Controller#cross_site_scripting2 as HTML
+  Parameters: {"name"=>"7*7"}
+  Rendering example2/cross_site_scripting2.html.erb within layouts/application
+  Rendered example2/cross_site_scripting2.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 13ms (Views: 10.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/example2?name=7*7" for 127.0.0.1 at 2021-03-31 11:05:39 +0500
+Processing by Example2Controller#cross_site_scripting2 as HTML
+  Parameters: {"name"=>"7*7"}
+  Rendering example2/cross_site_scripting2.html.erb within layouts/application
+  Rendered example2/cross_site_scripting2.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 11ms (Views: 8.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/example2?name=7*7" for 127.0.0.1 at 2021-03-31 11:05:47 +0500
+Processing by Example2Controller#cross_site_scripting2 as HTML
+  Parameters: {"name"=>"7*7"}
+  Rendering example2/cross_site_scripting2.html.erb within layouts/application
+  Rendered example2/cross_site_scripting2.html.erb within layouts/application (2.2ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 0, expected 1)):
+    3: <h4>Paramter is xss</h4>
+    4: 
+    5: 
+    6: <%= self.method.name %>
+    7: 
+    8: <% if params[:name] %>
+    9: <% params %>
+  
+app/views/example2/cross_site_scripting2.html.erb:6:in `method'
+app/views/example2/cross_site_scripting2.html.erb:6:in `_app_views_example__cross_site_scripting__html_erb__3801348120968335651_70302952825360'
+Started GET "/example2?name=test" for 127.0.0.1 at 2021-03-31 11:06:06 +0500
+Processing by Example2Controller#cross_site_scripting2 as HTML
+  Parameters: {"name"=>"test"}
+  Rendering example2/cross_site_scripting2.html.erb within layouts/application
+  Rendered example2/cross_site_scripting2.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 11ms (Views: 7.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/example2?name=test" for 127.0.0.1 at 2021-03-31 11:08:23 +0500
+Processing by Example2Controller#cross_site_scripting2 as HTML
+  Parameters: {"name"=>"test"}
+  Rendering example2/cross_site_scripting2.html.erb within layouts/application
+  Rendered example2/cross_site_scripting2.html.erb within layouts/application (7.7ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `handle_POST' for class `#<Class:0x00007fe15a6de0c8>'):
+    3: <h4>Paramter is xss</h4>
+    4: 
+    5: 
+    6: <%= self.method(:handle_POST).parameters %>
+    7: 
+    8: <% if params[:name] %>
+    9: <% params %>
+  
+app/views/example2/cross_site_scripting2.html.erb:6:in `method'
+app/views/example2/cross_site_scripting2.html.erb:6:in `_app_views_example__cross_site_scripting__html_erb__3801348120968335651_70303007140640'
+Started GET "/example2?name=test" for 127.0.0.1 at 2021-03-31 11:08:46 +0500
+Processing by Example2Controller#cross_site_scripting2 as HTML
+  Parameters: {"name"=>"test"}
+  Rendering example2/cross_site_scripting2.html.erb within layouts/application
+  Rendered example2/cross_site_scripting2.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 11ms (Views: 8.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/example2?name=test" for 127.0.0.1 at 2021-03-31 11:10:29 +0500
+Processing by Example2Controller#cross_site_scripting2 as HTML
+  Parameters: {"name"=>"test"}
+  Rendering example2/cross_site_scripting2.html.erb within layouts/application
+  Rendered example2/cross_site_scripting2.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 9ms (Views: 6.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/example2?name=test" for 127.0.0.1 at 2021-03-31 11:19:10 +0500
+Processing by Example2Controller#cross_site_scripting2 as HTML
+  Parameters: {"name"=>"test"}
+  Rendering example2/cross_site_scripting2.html.erb within layouts/application
+  Rendered example2/cross_site_scripting2.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 9ms (Views: 6.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/example2?name=test" for 127.0.0.1 at 2021-03-31 11:19:12 +0500
+Processing by Example2Controller#cross_site_scripting2 as HTML
+  Parameters: {"name"=>"test"}
+  Rendering example2/cross_site_scripting2.html.erb within layouts/application
+  Rendered example2/cross_site_scripting2.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 10ms (Views: 7.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-04-03 18:08:27 +0500
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/hassankhan/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 154ms (Views: 141.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-04-03 18:08:33 +0500
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 9ms (Views: 6.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-04-03 18:09:22 +0500
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 9ms (Views: 7.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-04-03 18:09:33 +0500
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 9ms (Views: 6.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-04-03 18:09:38 +0500
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 8ms (Views: 6.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-04-03 18:09:46 +0500
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 9ms (Views: 7.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-04-03 18:09:53 +0500
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 10ms (Views: 7.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-04-03 18:10:00 +0500
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 8ms (Views: 6.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-04-03 18:10:25 +0500
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 8ms (Views: 6.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-04-03 18:10:43 +0500
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 8ms (Views: 6.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-04-03 18:24:21 +0500
+Started GET "/" for 127.0.0.1 at 2021-04-03 18:24:21 +0500
+Processing by PostsController#index as HTML
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (1.7ms)
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 27ms (Views: 19.4ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 39ms (Views: 26.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-04-03 22:17:46 +0500
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 33ms (Views: 23.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-04-03 22:17:54 +0500
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 16ms (Views: 13.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-04-03 22:18:02 +0500
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 15ms (Views: 12.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-04-03 22:19:09 +0500
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.6ms)
+Started GET "/" for 127.0.0.1 at 2021-04-03 22:19:09 +0500
+Processing by PostsController#index as HTML
+Completed 200 OK in 30ms (Views: 26.7ms | ActiveRecord: 0.0ms)
+
+
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 16ms (Views: 13.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-04-03 22:19:59 +0500
+Started GET "/" for 127.0.0.1 at 2021-04-03 22:19:59 +0500
+Processing by PostsController#index as HTML
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.3ms)
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 25ms (Views: 19.0ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 25ms (Views: 20.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-04-03 22:20:17 +0500
+Started GET "/" for 127.0.0.1 at 2021-04-03 22:20:17 +0500
+Processing by PostsController#index as HTML
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (2.3ms)
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 26ms (Views: 18.5ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 31ms (Views: 24.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/" for 127.0.0.1 at 2021-04-07 16:21:58 +0500
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/hassankhan/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 142ms (Views: 128.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/" for 127.0.0.1 at 2021-04-07 16:25:33 +0500
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 10ms (Views: 7.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-04-21 16:11:49 +0500
+Started GET "/" for 127.0.0.1 at 2021-04-21 16:11:49 +0500
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/hassankhan/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/hassankhan/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+Processing by PostsController#index as HTML
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (1.4ms)
+  Rendered posts/index.html.erb within layouts/application (77.7ms)
+Completed 200 OK in 128ms (Views: 117.8ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 131ms (Views: 118.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-04-21 16:15:53 +0500
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 16ms (Views: 12.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-05-20 23:05:28 +0500
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/hassankhan/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 130ms (Views: 119.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/constantizetest?cmd=test" for 127.0.0.1 at 2021-05-20 23:06:09 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/constantizetest"):
+  
+actionpack (5.2.4.5) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.5) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.5) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.5) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.5) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.5) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/example13?cmd=1" for 127.0.0.1 at 2021-05-20 23:06:39 +0500
+Processing by Example13Controller#constantizetest as HTML
+  Parameters: {"cmd"=>"1"}
+  Rendering example13/constantizetest.html.erb within layouts/application
+  Rendered example13/constantizetest.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 10ms (Views: 7.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/example13?cmd=example13" for 127.0.0.1 at 2021-05-20 23:07:14 +0500
+Processing by Example13Controller#constantizetest as HTML
+  Parameters: {"cmd"=>"example13"}
+  Rendering example13/constantizetest.html.erb within layouts/application
+  Rendered example13/constantizetest.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 10ms (Views: 7.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/example13?cmd=asdasda" for 127.0.0.1 at 2021-05-20 23:07:19 +0500
+Processing by Example13Controller#constantizetest as HTML
+  Parameters: {"cmd"=>"asdasda"}
+  Rendering example13/constantizetest.html.erb within layouts/application
+  Rendered example13/constantizetest.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 8ms (Views: 5.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/example14?alert[type]=File&alert[value]=/etc/passwd" for 127.0.0.1 at 2021-05-20 23:13:48 +0500
+Processing by Example14Controller#testing_controller as HTML
+  Parameters: {"alert"=>{"type"=>"File", "value"=>"/etc/passwd"}}
+  Rendering example14/testing_controller.html.erb within layouts/application
+  Rendered example14/testing_controller.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 14ms (Views: 9.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/example14?alert[type]=File&alert[value]=/etc/asdsa" for 127.0.0.1 at 2021-05-20 23:13:51 +0500
+Processing by Example14Controller#testing_controller as HTML
+  Parameters: {"alert"=>{"type"=>"File", "value"=>"/etc/asdsa"}}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+Errno::ENOENT (No such file or directory @ rb_sysopen - /etc/asdsa):
+  
+app/controllers/example14_controller.rb:5:in `initialize'
+app/controllers/example14_controller.rb:5:in `new'
+app/controllers/example14_controller.rb:5:in `testing_controller'
+Started GET "/example14?alert[type]=File&alert[value]=/etc/passwd" for 127.0.0.1 at 2021-05-20 23:14:08 +0500
+Processing by Example14Controller#testing_controller as HTML
+  Parameters: {"alert"=>{"type"=>"File", "value"=>"/etc/passwd"}}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `constantize' for nil:NilClass):
+  
+app/controllers/example14_controller.rb:6:in `testing_controller'
+Started GET "/example14?a=File&b=/etc/passwd" for 127.0.0.1 at 2021-05-20 23:14:22 +0500
+Processing by Example14Controller#testing_controller as HTML
+  Parameters: {"a"=>"File", "b"=>"/etc/passwd"}
+  Rendering example14/testing_controller.html.erb within layouts/application
+  Rendered example14/testing_controller.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 10ms (Views: 7.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/example14?a=File&b=/etc/passwd" for 127.0.0.1 at 2021-05-20 23:19:09 +0500
+Processing by Example14Controller#testing_controller as HTML
+  Parameters: {"a"=>"File", "b"=>"/etc/passwd"}
+  Rendering example14/testing_controller.html.erb within layouts/application
+  Rendered example14/testing_controller.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 11ms (Views: 7.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/example14?a=File&b=/etc/passw" for 127.0.0.1 at 2021-05-20 23:19:19 +0500
+Processing by Example14Controller#testing_controller as HTML
+  Parameters: {"a"=>"File", "b"=>"/etc/passw"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+Errno::ENOENT (No such file or directory @ rb_sysopen - /etc/passw):
+  
+app/controllers/example14_controller.rb:6:in `initialize'
+app/controllers/example14_controller.rb:6:in `new'
+app/controllers/example14_controller.rb:6:in `testing_controller'
+Started GET "/example14?a=ActionController::MimeResponds::Collector&b[]=exit" for 127.0.0.1 at 2021-05-20 23:20:52 +0500
+Processing by Example14Controller#testing_controller as HTML
+  Parameters: {"a"=>"ActionController::MimeResponds::Collector", "b"=>["exit"]}
+  Rendering example14/testing_controller.html.erb within layouts/application
+  Rendered example14/testing_controller.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 11ms (Views: 6.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/example14?a=Logger&b=%7cdate" for 127.0.0.1 at 2021-05-20 23:23:43 +0500
+Processing by Example14Controller#testing_controller as HTML
+  Parameters: {"a"=>"Logger", "b"=>"|date"}
+  Rendering example14/testing_controller.html.erb within layouts/application
+  Rendered example14/testing_controller.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 12ms (Views: 7.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/example14?a=Logger&b=|whoami" for 127.0.0.1 at 2021-05-20 23:26:19 +0500
+Processing by Example14Controller#testing_controller as HTML
+  Parameters: {"a"=>"Logger", "b"=>"|whoami"}
+  Rendering example14/testing_controller.html.erb within layouts/application
+  Rendered example14/testing_controller.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 14ms (Views: 8.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/example14?a=1" for 127.0.0.1 at 2021-05-20 23:35:36 +0500
+Processing by Example14Controller#testing_controller as HTML
+  Parameters: {"a"=>"1"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (wrong constant name 1):
+  
+app/controllers/example14_controller.rb:14:in `testing_controller'
+Started GET "/example14?a=1" for 127.0.0.1 at 2021-05-20 23:35:53 +0500
+Processing by Example14Controller#testing_controller as HTML
+  Parameters: {"a"=>"1"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (wrong constant name 1):
+  
+app/controllers/example14_controller.rb:14:in `testing_controller'
+Started GET "/example14?a=posts" for 127.0.0.1 at 2021-05-20 23:36:15 +0500
+Processing by Example14Controller#testing_controller as HTML
+  Parameters: {"a"=>"posts"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (wrong constant name posts):
+  
+app/controllers/example14_controller.rb:14:in `testing_controller'
+Started GET "/example14?a=posts" for 127.0.0.1 at 2021-05-20 23:38:32 +0500
+Processing by Example14Controller#testing_controller as HTML
+  Parameters: {"a"=>"posts"}
+  Rendering example14/testing_controller.html.erb within layouts/application
+  Rendered example14/testing_controller.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 10ms (Views: 7.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/example14?a=posts" for 127.0.0.1 at 2021-05-20 23:38:38 +0500
+Processing by Example14Controller#testing_controller as HTML
+  Parameters: {"a"=>"posts"}
+  Rendering example14/testing_controller.html.erb within layouts/application
+  Rendered example14/testing_controller.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 9ms (Views: 7.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/example14?a=postss" for 127.0.0.1 at 2021-05-20 23:38:40 +0500
+Processing by Example14Controller#testing_controller as HTML
+  Parameters: {"a"=>"postss"}
+  Rendering example14/testing_controller.html.erb within layouts/application
+  Rendered example14/testing_controller.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 9ms (Views: 6.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/example14?a=postssasdasdsa" for 127.0.0.1 at 2021-05-20 23:38:43 +0500
+Processing by Example14Controller#testing_controller as HTML
+  Parameters: {"a"=>"postssasdasdsa"}
+  Rendering example14/testing_controller.html.erb within layouts/application
+  Rendered example14/testing_controller.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 8ms (Views: 5.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/example14?a=postssasdasdsa" for 127.0.0.1 at 2021-05-20 23:38:52 +0500
+Processing by Example14Controller#testing_controller as HTML
+  Parameters: {"a"=>"postssasdasdsa"}
+  Rendering example14/testing_controller.html.erb within layouts/application
+  Rendered example14/testing_controller.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 19ms (Views: 15.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/example14?a=postssasdasdsa" for 127.0.0.1 at 2021-05-20 23:38:54 +0500
+Processing by Example14Controller#testing_controller as HTML
+  Parameters: {"a"=>"postssasdasdsa"}
+  Rendering example14/testing_controller.html.erb within layouts/application
+  Rendered example14/testing_controller.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 10ms (Views: 7.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/example14?a=postssasdasdsa" for 127.0.0.1 at 2021-05-20 23:39:45 +0500
+Processing by Example14Controller#testing_controller as HTML
+  Parameters: {"a"=>"postssasdasdsa"}
+  Rendering example14/testing_controller.html.erb within layouts/application
+  Rendered example14/testing_controller.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 11ms (Views: 7.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/example14?a=postssasdasdsa" for 127.0.0.1 at 2021-05-20 23:43:18 +0500
+Processing by Example14Controller#testing_controller as HTML
+  Parameters: {"a"=>"postssasdasdsa"}
+  Rendering example14/testing_controller.html.erb within layouts/application
+  Rendered example14/testing_controller.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 9ms (Views: 6.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/example14?a=postssasdasdsa" for 127.0.0.1 at 2021-05-20 23:43:19 +0500
+Processing by Example14Controller#testing_controller as HTML
+  Parameters: {"a"=>"postssasdasdsa"}
+  Rendering example14/testing_controller.html.erb within layouts/application
+  Rendered example14/testing_controller.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 8ms (Views: 5.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/example14?a=asdasdas" for 127.0.0.1 at 2021-05-20 23:43:21 +0500
+Processing by Example14Controller#testing_controller as HTML
+  Parameters: {"a"=>"asdasdas"}
+  Rendering example14/testing_controller.html.erb within layouts/application
+  Rendered example14/testing_controller.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 8ms (Views: 6.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/example14?a=asdasdas" for 127.0.0.1 at 2021-05-20 23:43:37 +0500
+Processing by Example14Controller#testing_controller as HTML
+  Parameters: {"a"=>"asdasdas"}
+  Rendering example14/testing_controller.html.erb within layouts/application
+  Rendered example14/testing_controller.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 9ms (Views: 7.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/example14?a=asdasdas" for 127.0.0.1 at 2021-05-20 23:43:47 +0500
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/hassankhan/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+Processing by Example14Controller#testing_controller as HTML
+  Parameters: {"a"=>"asdasdas"}
+  Rendering example14/testing_controller.html.erb within layouts/application
+  Rendered example14/testing_controller.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 136ms (Views: 130.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/example14?a=asdasdas" for 127.0.0.1 at 2021-05-20 23:43:48 +0500
+Processing by Example14Controller#testing_controller as HTML
+  Parameters: {"a"=>"asdasdas"}
+  Rendering example14/testing_controller.html.erb within layouts/application
+  Rendered example14/testing_controller.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 9ms (Views: 6.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/example14?a=asdasdas" for 127.0.0.1 at 2021-05-20 23:43:58 +0500
+Processing by Example14Controller#testing_controller as HTML
+  Parameters: {"a"=>"asdasdas"}
+Completed 500 Internal Server Error in 154ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `test11' for #<Example14Controller:0x00007fe96d58fee0>
+Did you mean?  @test11
+               test):
+  
+app/controllers/example14_controller.rb:18:in `block in testing_controller'
+app/controllers/example14_controller.rb:17:in `each'
+app/controllers/example14_controller.rb:17:in `testing_controller'
+Started GET "/example14?a=asdasdas" for 127.0.0.1 at 2021-05-20 23:44:17 +0500
+Processing by Example14Controller#testing_controller as HTML
+  Parameters: {"a"=>"asdasdas"}
+  Rendering example14/testing_controller.html.erb within layouts/application
+  Rendered example14/testing_controller.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 12ms (Views: 8.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/example14?a=asdasdas" for 127.0.0.1 at 2021-05-20 23:44:20 +0500
+Processing by Example14Controller#testing_controller as HTML
+  Parameters: {"a"=>"asdasdas"}
+  Rendering example14/testing_controller.html.erb within layouts/application
+  Rendered example14/testing_controller.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 8ms (Views: 6.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/example14?a=posts" for 127.0.0.1 at 2021-05-20 23:44:23 +0500
+Processing by Example14Controller#testing_controller as HTML
+  Parameters: {"a"=>"posts"}
+  Rendering example14/testing_controller.html.erb within layouts/application
+  Rendered example14/testing_controller.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 11ms (Views: 7.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/example14?a=posts" for 127.0.0.1 at 2021-05-20 23:45:12 +0500
+Processing by Example14Controller#testing_controller as HTML
+  Parameters: {"a"=>"posts"}
+  Rendering example14/testing_controller.html.erb within layouts/application
+  Rendered example14/testing_controller.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 11ms (Views: 8.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/example14?a=postsasdsa" for 127.0.0.1 at 2021-05-20 23:45:15 +0500
+Processing by Example14Controller#testing_controller as HTML
+  Parameters: {"a"=>"postsasdsa"}
+  Rendering example14/testing_controller.html.erb within layouts/application
+  Rendered example14/testing_controller.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 8ms (Views: 5.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/example14?a=postsasdsa" for 127.0.0.1 at 2021-05-20 23:46:28 +0500
+  
+TypeError (no implicit conversion of nil into String):
+  
+app/controllers/example14_controller.rb:1:in `<top (required)>'
+Started GET "/example14?a=postsasdsa" for 127.0.0.1 at 2021-05-20 23:46:35 +0500
+Processing by Example14Controller#testing_controller as HTML
+  Parameters: {"a"=>"postsasdsa"}
+  Rendering example14/testing_controller.html.erb within layouts/application
+  Rendered example14/testing_controller.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 11ms (Views: 7.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/example14?a=postsasdsaasdas" for 127.0.0.1 at 2021-05-20 23:46:38 +0500
+Processing by Example14Controller#testing_controller as HTML
+  Parameters: {"a"=>"postsasdsaasdas"}
+  Rendering example14/testing_controller.html.erb within layouts/application
+  Rendered example14/testing_controller.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 8ms (Views: 6.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/example14?a=asdasdas" for 127.0.0.1 at 2021-05-20 23:46:49 +0500
+Processing by Example14Controller#testing_controller as HTML
+  Parameters: {"a"=>"asdasdas"}
+  Rendering example14/testing_controller.html.erb within layouts/application
+  Rendered example14/testing_controller.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 10ms (Views: 7.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/example14?a=asdasdas" for 127.0.0.1 at 2021-05-20 23:47:34 +0500
+Processing by Example14Controller#testing_controller as HTML
+  Parameters: {"a"=>"asdasdas"}
+  Rendering example14/testing_controller.html.erb within layouts/application
+  Rendered example14/testing_controller.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 9ms (Views: 6.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/example14?a=asdasdas" for 127.0.0.1 at 2021-05-20 23:47:39 +0500
+Processing by Example14Controller#testing_controller as HTML
+  Parameters: {"a"=>"asdasdas"}
+  Rendering example14/testing_controller.html.erb within layouts/application
+  Rendered example14/testing_controller.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 9ms (Views: 6.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/example14?a=asdasdasasdasdasd" for 127.0.0.1 at 2021-05-20 23:47:41 +0500
+Processing by Example14Controller#testing_controller as HTML
+  Parameters: {"a"=>"asdasdasasdasdasd"}
+  Rendering example14/testing_controller.html.erb within layouts/application
+  Rendered example14/testing_controller.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 9ms (Views: 6.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/example14?a=asdasdasasdasdasd" for 127.0.0.1 at 2021-05-20 23:57:41 +0500
+  
+SyntaxError (/Users/hassankhan/projects/rubyonrails-buggyapp/app/controllers/example14_controller.rb:14: dynamic constant assignment
+		Allowed_tags = %w[h1 h2 h3].freeze
+		             ^
+/Users/hassankhan/projects/rubyonrails-buggyapp/app/controllers/example14_controller.rb:18: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/example14_controller.rb:14: dynamic constant assignment
+app/controllers/example14_controller.rb:18: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/example14?a=asdasdasasdasdasd" for 127.0.0.1 at 2021-05-20 23:57:56 +0500
+  
+SyntaxError (/Users/hassankhan/projects/rubyonrails-buggyapp/app/controllers/example14_controller.rb:18: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/example14_controller.rb:18: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/example14?a=asdasdasasdasdasd" for 127.0.0.1 at 2021-05-20 23:58:11 +0500
+Processing by Example14Controller#testing_controller as HTML
+  Parameters: {"a"=>"asdasdasasdasdasd"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `each' for "asdasdasasdasdasd":String):
+  
+app/controllers/example14_controller.rb:15:in `testing_controller'
+Started GET "/example14?a=[%22test%22,%20%22test2%22]" for 127.0.0.1 at 2021-05-20 23:58:26 +0500
+Processing by Example14Controller#testing_controller as HTML
+  Parameters: {"a"=>"[\"test\", \"test2\"]"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `each' for "[\"test\", \"test2\"]":String):
+  
+app/controllers/example14_controller.rb:15:in `testing_controller'
+Started GET "/example14?a=[%22test%22,%20%22test2%22]" for 127.0.0.1 at 2021-05-21 00:00:39 +0500
+  
+SyntaxError (/Users/hassankhan/projects/rubyonrails-buggyapp/app/controllers/example14_controller.rb:19: syntax error, unexpected keyword_end, expecting end-of-input):
+  
+app/controllers/example14_controller.rb:19: syntax error, unexpected keyword_end, expecting end-of-input
+Started GET "/example14?a=test" for 127.0.0.1 at 2021-05-21 00:00:44 +0500
+  
+SyntaxError (/Users/hassankhan/projects/rubyonrails-buggyapp/app/controllers/example14_controller.rb:19: syntax error, unexpected keyword_end, expecting end-of-input):
+  
+app/controllers/example14_controller.rb:19: syntax error, unexpected keyword_end, expecting end-of-input
+Started GET "/example14?a=test" for 127.0.0.1 at 2021-05-21 00:00:53 +0500
+Processing by Example14Controller#testing_controller as HTML
+  Parameters: {"a"=>"test"}
+  Rendering example14/testing_controller.html.erb within layouts/application
+  Rendered example14/testing_controller.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/hassankhan/projects/rubyonrails-buggyapp/app/views/example14/testing_controller.html.erb:17: syntax error, unexpected end-of-input, expecting keyword_end
+          end
+             ^):
+  
+app/views/example14/testing_controller.html.erb:17: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/example14?a=test" for 127.0.0.1 at 2021-05-21 00:01:11 +0500
+Processing by Example14Controller#testing_controller as HTML
+  Parameters: {"a"=>"test"}
+  Rendering example14/testing_controller.html.erb within layouts/application
+  Rendered example14/testing_controller.html.erb within layouts/application (3.4ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for "test":String):
+     5: <br>
+     6: <br>
+     7: 
+     8: <% @test.each do |x| %>
+     9: <%= x %>
+    10: <% end %>
+  
+app/views/example14/testing_controller.html.erb:8:in `_app_views_example___testing_controller_html_erb___1878039626080746556_70320210370220'
+Started GET "/example14?a[]=test" for 127.0.0.1 at 2021-05-21 00:02:21 +0500
+Processing by Example14Controller#testing_controller as HTML
+  Parameters: {"a"=>["test"]}
+  Rendering example14/testing_controller.html.erb within layouts/application
+  Rendered example14/testing_controller.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 11ms (Views: 7.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/example14?a[]=posts" for 127.0.0.1 at 2021-05-21 00:02:26 +0500
+Processing by Example14Controller#testing_controller as HTML
+  Parameters: {"a"=>["posts"]}
+  Rendering example14/testing_controller.html.erb within layouts/application
+  Rendered example14/testing_controller.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 11ms (Views: 8.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/example14?a[]=posts" for 127.0.0.1 at 2021-05-21 00:04:58 +0500
+Processing by Example14Controller#testing_controller as HTML
+  Parameters: {"a"=>["posts"]}
+  Rendering example14/testing_controller.html.erb within layouts/application
+  Rendered example14/testing_controller.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 11ms (Views: 7.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/example14?a[]=product" for 127.0.0.1 at 2021-05-21 00:05:02 +0500
+Processing by Example14Controller#testing_controller as HTML
+  Parameters: {"a"=>["product"]}
+  Rendering example14/testing_controller.html.erb within layouts/application
+  Rendered example14/testing_controller.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 9ms (Views: 7.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/example14?a[]=asdasd" for 127.0.0.1 at 2021-05-21 00:05:04 +0500
+Processing by Example14Controller#testing_controller as HTML
+  Parameters: {"a"=>["asdasd"]}
+  Rendering example14/testing_controller.html.erb within layouts/application
+  Rendered example14/testing_controller.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 8ms (Views: 5.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/example14?a[]=asdasdsadasd" for 127.0.0.1 at 2021-05-21 00:09:51 +0500
+Processing by Example14Controller#testing_controller as HTML
+  Parameters: {"a"=>["asdasdsadasd"]}
+  Rendering example14/testing_controller.html.erb within layouts/application
+  Rendered example14/testing_controller.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 11ms (Views: 7.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/example14?a[]=asdasdsadasd" for 127.0.0.1 at 2021-05-21 00:25:15 +0500
+Processing by Example14Controller#testing_controller as HTML
+  Parameters: {"a"=>["asdasdsadasd"]}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `constantize' for ["asdasdsadasd"]:Array):
+  
+app/controllers/example14_controller.rb:14:in `testing_controller'
+Started GET "/example14?a=asdasdsadasd" for 127.0.0.1 at 2021-05-21 00:25:40 +0500
+Processing by Example14Controller#testing_controller as HTML
+  Parameters: {"a"=>"asdasdsadasd"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (wrong constant name asdasdsadasd):
+  
+app/controllers/example14_controller.rb:14:in `testing_controller'
+Started GET "/example14?a=product&b=x" for 127.0.0.1 at 2021-05-21 00:28:42 +0500
+  
+ActionController::RoutingError (uninitialized constant InfoAlert):
+  
+app/controllers/example14_controller.rb:2:in `<top (required)>'
+Started GET "/example14?a=product&b=x" for 127.0.0.1 at 2021-05-21 00:28:57 +0500
+Processing by Example14Controller#testing_controller as HTML
+  Parameters: {"a"=>"product", "b"=>"x"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant Example14Controller::ALERTS):
+  
+app/controllers/example14_controller.rb:20:in `testing_controller'
+Started GET "/example14?a=product&b=product" for 127.0.0.1 at 2021-05-21 00:29:01 +0500
+Processing by Example14Controller#testing_controller as HTML
+  Parameters: {"a"=>"product", "b"=>"product"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant Example14Controller::ALERTS):
+  
+app/controllers/example14_controller.rb:20:in `testing_controller'
+Started GET "/example14?a=product&b=product" for 127.0.0.1 at 2021-05-21 00:29:13 +0500
+Processing by Example14Controller#testing_controller as HTML
+  Parameters: {"a"=>"product", "b"=>"product"}
+Completed 500 Internal Server Error in 81ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `param' for #<Example14Controller:0x00007fe96d762150>
+Did you mean?  params
+               params=):
+  
+app/controllers/example14_controller.rb:20:in `testing_controller'
+Started GET "/example14?a=product&b=product" for 127.0.0.1 at 2021-05-21 00:29:31 +0500
+Processing by Example14Controller#testing_controller as HTML
+  Parameters: {"a"=>"product", "b"=>"product"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/controllers/example14_controller.rb:20:in `testing_controller'
+Started GET "/example14?a=product&b=product" for 127.0.0.1 at 2021-05-21 00:29:53 +0500
+Processing by Example14Controller#testing_controller as HTML
+  Parameters: {"a"=>"product", "b"=>"product"}
+  Rendering example14/testing_controller.html.erb within layouts/application
+  Rendered example14/testing_controller.html.erb within layouts/application (3.3ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+     5: <br>
+     6: <br>
+     7: 
+     8: <% @test.each do |x| %>
+     9: <% if x.include? 'product'%>
+    10: 	<%= x %>
+    11: 	<% end %>
+  
+app/views/example14/testing_controller.html.erb:8:in `_app_views_example___testing_controller_html_erb___1878039626080746556_70320210479600'
+Started GET "/example14?a=product&b=product" for 127.0.0.1 at 2021-05-21 00:30:19 +0500
+Processing by Example14Controller#testing_controller as HTML
+  Parameters: {"a"=>"product", "b"=>"product"}
+  Rendering example14/testing_controller.html.erb within layouts/application
+  Rendered example14/testing_controller.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 10ms (Views: 7.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/example14?a=asd&b=product" for 127.0.0.1 at 2021-05-21 00:30:23 +0500
+Processing by Example14Controller#testing_controller as HTML
+  Parameters: {"a"=>"asd", "b"=>"product"}
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+KeyError (key not found: "asd"):
+  
+app/controllers/example14_controller.rb:20:in `fetch'
+app/controllers/example14_controller.rb:20:in `testing_controller'
+Started GET "/example14?a=asdasdas" for 127.0.0.1 at 2021-05-21 00:30:30 +0500
+Processing by Example14Controller#testing_controller as HTML
+  Parameters: {"a"=>"asdasdas"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+KeyError (key not found: "asdasdas"):
+  
+app/controllers/example14_controller.rb:20:in `fetch'
+app/controllers/example14_controller.rb:20:in `testing_controller'
+Started GET "/example14?a=asdasdas" for 127.0.0.1 at 2021-05-21 00:31:04 +0500
+Processing by Example14Controller#testing_controller as HTML
+  Parameters: {"a"=>"asdasdas"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+KeyError (key not found: "asdasdas"):
+  
+app/controllers/example14_controller.rb:22:in `fetch'
+app/controllers/example14_controller.rb:22:in `testing_controller'
+Started GET "/example14?a=users" for 127.0.0.1 at 2021-05-21 00:31:08 +0500
+Processing by Example14Controller#testing_controller as HTML
+  Parameters: {"a"=>"users"}
+  Rendering example14/testing_controller.html.erb within layouts/application
+  Rendered example14/testing_controller.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 9ms (Views: 6.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/example14?a=asdasdas" for 127.0.0.1 at 2021-05-21 00:35:43 +0500
+Processing by Example14Controller#testing_controller as HTML
+  Parameters: {"a"=>"asdasdas"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+KeyError (key not found: "asdasdas"):
+  
+app/controllers/example14_controller.rb:22:in `fetch'
+app/controllers/example14_controller.rb:22:in `testing_controller'
