@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root "posts#index"
   get 'testXSS' => "pages#about"
 
+  #get 'example1' => "example1#cross_site_scripting"
   get 'example1' => "example1#cross_site_scripting"
   get 'example2' => "example2#cross_site_scripting2"
   get 'example3' => 'example3#cross_site_scripting3'
@@ -31,8 +32,11 @@ Rails.application.routes.draw do
   get '/example21', to: "example21#FileAcess2"
   get '/example22', to: "example22#cross_site_scripting22"
   get '/example23', to: "example23#md5hacking"
+  get '/example24', to: "example24#vulnrender"
   get '/jwtplaying', to: "jwtplaying#jwtplaying"
   get '/EgiftTokenTest', to: "egift_token_test#egift_token_test_method"
+  get '/xsshyperlink', to: "xsshyperlink#xss_method"
+  #get '/vulnredner', to: "vulnredner#show"
  
   get 'about' => 'pages#about'
 
