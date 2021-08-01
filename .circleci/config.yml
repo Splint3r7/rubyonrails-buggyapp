@@ -1,15 +1,15 @@
-version: 2
+version: 2.1
+orbs:
+  ruby: circleci/ruby@0.1.2 
+
 jobs:
   build:
-    # your 'build' configurations here
-  security:
     docker:
-      - image: circleci/ruby:2.5
+      - image: circleci/ruby:2.6.3-stretch-node
+    executor: ruby/default
     steps:
       - checkout
       - run:
-          name: Install Bundler-audit
-          command: gem install bundler-audit
-      - run:
-          name: Run Bundle-audit
-          command: bundle exec bundle audit check --update
+          name: Which bundler?
+          command: bundle -v
+      - ruby/bundle-install
