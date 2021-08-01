@@ -12,3 +12,7 @@ jobs:
       - run:
           name: bunlder audit Scan
           command: gem install bundler-audit && bundler-audit || true
+      - run:
+          name: brakeman
+          command: gem install brakeman && brakeman . || true
+
