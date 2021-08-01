@@ -3,7 +3,7 @@ orbs:
   ruby: circleci/ruby@0.1.2 
 
 jobs:
-  brakeman-bunlder-scan:
+  bunlder-audit-scanner:
     machine:
       image: ubuntu-2004:202010-01
       resource_class: large
@@ -13,6 +13,14 @@ jobs:
       - run:
           name: bunlder audit Scan
           command: gem install bundler-audit && bundler-audit || true
+
+  brakeman-scanner:
+    machine:
+      image: ubuntu-2004:202010-01
+      resource_class: large
+    
+    steps:
+      - checkout
       - run:
           name: brakeman
           command: gem install brakeman && brakeman . || true
@@ -20,4 +28,5 @@ jobs:
 workflows:
   build_and_test:
     jobs:
-      - brakeman-bunlder-scan
+      - bunlder-audit-scanner
+      - brakeman-scanner
