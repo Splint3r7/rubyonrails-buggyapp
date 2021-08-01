@@ -11,5 +11,5 @@ jobs:
       - checkout
       - run:
           name: bunlder audit Scan
-          command: gem install bundler-audit && bundler-audit
+          command: gem install bundler-audit && bundler-audit || true
       - ruby/bundle-install
