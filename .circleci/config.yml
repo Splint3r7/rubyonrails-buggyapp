@@ -23,7 +23,13 @@ jobs:
       - checkout
       - run:
           name: brakeman
-          command: gem install brakeman && brakeman . || true
+          command: | 
+            gem install brakeman
+            mkdir -p security
+            brakeman . -o security/brakeman.html -f html || true
+
+      - store_artifacts:
+          path: security/brakeman.html
 
 workflows:
   build_and_test:
