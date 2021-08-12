@@ -1,0 +1,6 @@
+Advisories:
+  # Send the following advisory names to bundler_audit's `ignored` option.
+  Ignore:
+    - CVE-2019-8331
+    - CVE-2019-1020001
+    - CVE-2021-22885

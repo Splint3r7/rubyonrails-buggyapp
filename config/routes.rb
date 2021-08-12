@@ -37,6 +37,10 @@ Rails.application.routes.draw do
   get '/EgiftTokenTest', to: "egift_token_test#egift_token_test_method"
   get '/xsshyperlink', to: "xsshyperlink#xss_method"
   #get '/vulnredner', to: "vulnredner#show"
+
+  get '/redirect', to: "redirectch#redirectchfun"
+
+  get '/challanges', to: "challanges#motd"
  
   get 'about' => 'pages#about'
 
