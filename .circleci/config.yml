@@ -5,8 +5,7 @@ orbs:
 jobs:
   bunlder-audit-scanner:
     machine:
-      image: ubuntu-2004:202010-01
-      resource_class: large
+      image: circleci/node:lts-buster
     
     steps:
       - checkout
@@ -16,9 +15,8 @@ jobs:
 
   brakeman-scanner:
     machine:
-      image: ubuntu-2004:202010-01
-      resource_class: large
-    
+      image: circleci/node:lts-buster
+
     steps:
       - checkout
       - run:
