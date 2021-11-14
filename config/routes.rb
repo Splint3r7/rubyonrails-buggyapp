@@ -41,7 +41,9 @@ Rails.application.routes.draw do
   get '/redirect', to: "redirectch#redirectchfun"
 
   get '/challanges', to: "challanges#motd"
- 
+  get '/mail', to: "challanges#mail"
+  match "/authorize", to: "challanges#authorize" , 
+                  :via => [:get, :post]
   get 'about' => 'pages#about'
 
   resources :posts do

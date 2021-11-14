@@ -58604,3 +58604,809 @@ Processing by ChallangesController#motd as HTML
 Completed 200 OK in 5032ms (Views: 16.6ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2021-08-12 18:13:43 +0500
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/hassankhan/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 123ms (Views: 110.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/challanges" for 127.0.0.1 at 2021-08-12 18:14:00 +0500
+  
+SyntaxError (/Users/hassankhan/projects/rubyonrails-buggyapp/app/controllers/challanges_controller.rb:28: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/challanges_controller.rb:28: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/challanges" for 127.0.0.1 at 2021-08-12 18:14:11 +0500
+Processing by ChallangesController#motd as HTML
+  Rendering challanges/motd.html.erb within layouts/application
+  Rendered challanges/motd.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 11ms (Views: 7.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/challanges?recipent=hassankhan14044@outlook.com" for 127.0.0.1 at 2021-08-12 18:15:36 +0500
+Processing by ChallangesController#motd as HTML
+  Parameters: {"recipent"=>"hassankhan14044@outlook.com"}
+  Rendering challanges/motd.html.erb within layouts/application
+  Rendered challanges/motd.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 11ms (Views: 7.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/challanges/mail?recipent=hassankhan14044@outlook.com" for 127.0.0.1 at 2021-08-12 18:15:53 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/challanges/mail"):
+  
+actionpack (5.2.4.5) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.5) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.5) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.5) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.5) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.5) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/challanges?recipent=hassankhan14044@outlook.com" for 127.0.0.1 at 2021-08-12 18:16:23 +0500
+Processing by ChallangesController#motd as HTML
+  Parameters: {"recipent"=>"hassankhan14044@outlook.com"}
+  Rendering challanges/motd.html.erb within layouts/application
+  Rendered challanges/motd.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 24ms (Views: 21.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/challanges?recipent=hassankhan14044@outlook.com" for 127.0.0.1 at 2021-08-12 18:16:28 +0500
+Processing by ChallangesController#motd as HTML
+  Parameters: {"recipent"=>"hassankhan14044@outlook.com"}
+  Rendering challanges/motd.html.erb within layouts/application
+  Rendered challanges/motd.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 9ms (Views: 5.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/mail?recipent=hassankhan14044@outlook.com" for 127.0.0.1 at 2021-08-12 18:23:07 +0500
+Processing by ChallangesController#mail as HTML
+  Parameters: {"recipent"=>"hassankhan14044@outlook.com"}
+Completed 406 Not Acceptable in 138ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (ChallangesController#mail is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.2.4.5) lib/action_controller/metal/implicit_render.rb:55:in `default_render'
+actionpack (5.2.4.5) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (5.2.4.5) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (5.2.4.5) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.4.5) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.4.5) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.4.5) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.4.5) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.4.5) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.4.5) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.4.5) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.4.5) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.4.5) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.4.5) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.4.5) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.4.5) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.4.5) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.4.5) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.4.5) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.4.5) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.4.5) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.4.5) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.4.5) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.4.5) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.4.5) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.4.5) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.4.5) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.4.5) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.4.5) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.5) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.5) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.5) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.5) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.5) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/mail?recipent=hassankhan14044@outlook.com" for 127.0.0.1 at 2021-08-12 18:24:09 +0500
+Processing by ChallangesController#mail as HTML
+  Parameters: {"recipent"=>"hassankhan14044@outlook.com"}
+  Rendering challanges/mail.html.erb within layouts/application
+  Rendered challanges/mail.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 11ms (Views: 8.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/mail?recipent=hassankhan14044@outlook.com" for 127.0.0.1 at 2021-08-12 18:24:23 +0500
+Processing by ChallangesController#mail as HTML
+  Parameters: {"recipent"=>"hassankhan14044@outlook.com"}
+  Rendering challanges/mail.html.erb within layouts/application
+  Rendered challanges/mail.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 11ms (Views: 7.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-08-26 16:26:29 +0500
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/hassankhan/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 140ms (Views: 124.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/authorize" for 127.0.0.1 at 2021-08-26 16:27:11 +0500
+Processing by ChallangesController#authorize as HTML
+  Rendering challanges/authorize.html.erb within layouts/application
+  Rendered challanges/authorize.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 10ms (Views: 9.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/authorize" for 127.0.0.1 at 2021-08-26 16:27:59 +0500
+Processing by ChallangesController#authorize as HTML
+  Rendering challanges/authorize.html.erb within layouts/application
+  Rendered challanges/authorize.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 9ms (Views: 8.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/authorize" for 127.0.0.1 at 2021-08-26 16:28:28 +0500
+Processing by ChallangesController#authorize as HTML
+  Rendering challanges/authorize.html.erb within layouts/application
+  Rendered challanges/authorize.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/authorize" for 127.0.0.1 at 2021-08-26 16:28:30 +0500
+Processing by ChallangesController#authorize as HTML
+  Rendering challanges/authorize.html.erb within layouts/application
+  Rendered challanges/authorize.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 11ms (Views: 9.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/authorize" for 127.0.0.1 at 2021-08-26 16:28:40 +0500
+  
+ActionController::RoutingError (No route matches [POST] "/authorize"):
+  
+actionpack (5.2.4.5) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.5) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.5) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.5) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.5) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.5) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/authorize" for 127.0.0.1 at 2021-08-26 16:29:52 +0500
+Processing by ChallangesController#authorize as HTML
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+actionpack (5.2.4.5) lib/action_controller/metal/request_forgery_protection.rb:211:in `handle_unverified_request'
+actionpack (5.2.4.5) lib/action_controller/metal/request_forgery_protection.rb:243:in `handle_unverified_request'
+actionpack (5.2.4.5) lib/action_controller/metal/request_forgery_protection.rb:238:in `verify_authenticity_token'
+activesupport (5.2.4.5) lib/active_support/callbacks.rb:426:in `block in make_lambda'
+activesupport (5.2.4.5) lib/active_support/callbacks.rb:198:in `block (2 levels) in halting'
+actionpack (5.2.4.5) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.2.4.5) lib/active_support/callbacks.rb:199:in `block in halting'
+activesupport (5.2.4.5) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (5.2.4.5) lib/active_support/callbacks.rb:513:in `each'
+activesupport (5.2.4.5) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (5.2.4.5) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.2.4.5) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.4.5) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.4.5) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.4.5) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.4.5) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.4.5) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.4.5) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.4.5) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.4.5) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.4.5) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.4.5) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.4.5) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.4.5) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.4.5) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.4.5) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.4.5) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.4.5) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.4.5) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.4.5) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.4.5) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.4.5) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.5) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.5) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.5) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.5) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.5) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/authorize" for 127.0.0.1 at 2021-08-26 16:30:08 +0500
+Processing by ChallangesController#authorize as HTML
+  Rendering challanges/authorize.html.erb within layouts/application
+  Rendered challanges/authorize.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/authorize" for 127.0.0.1 at 2021-08-26 16:30:14 +0500
+Processing by ChallangesController#authorize as HTML
+  Rendering challanges/authorize.html.erb within layouts/application
+  Rendered challanges/authorize.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 9ms (Views: 7.5ms | ActiveRecord: 0.0ms)
+
+
+Started HEAD "/authorize" for 127.0.0.1 at 2021-08-26 16:34:47 +0500
+Processing by ChallangesController#authorize as HTML
+Completed 500 Internal Server Error in 374ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `authorize!' for #<ChallangesController:0x00007f9e47533418>
+Did you mean?  authorize):
+  
+app/controllers/challanges_controller.rb:34:in `authorize'
+Started HEAD "/authorize" for 127.0.0.1 at 2021-08-26 16:34:57 +0500
+Processing by ChallangesController#authorize as HTML
+Completed 500 Internal Server Error in 89ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `authorize!' for #<ChallangesController:0x00007f9e4631e6b0>
+Did you mean?  authorize):
+  
+app/controllers/challanges_controller.rb:34:in `authorize'
+Started DELETE "/authorize" for 127.0.0.1 at 2021-08-26 16:35:04 +0500
+  
+ActionController::RoutingError (No route matches [DELETE] "/authorize"):
+  
+actionpack (5.2.4.5) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.5) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.5) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.5) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.5) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.5) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/example22" for 127.0.0.1 at 2021-09-27 11:21:10 +0500
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/hassankhan/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+Processing by Example22Controller#cross_site_scripting22 as HTML
+  Rendering example22/cross_site_scripting22.html.erb within layouts/application
+  Rendered example22/cross_site_scripting22.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 118ms (Views: 112.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/example22?test1=1" for 127.0.0.1 at 2021-09-27 11:21:30 +0500
+Processing by Example22Controller#cross_site_scripting22 as HTML
+  Parameters: {"test1"=>"1"}
+  Rendering example22/cross_site_scripting22.html.erb within layouts/application
+  Rendered example22/cross_site_scripting22.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 11ms (Views: 9.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/example22?test1=%22%3E%3CtstXSS" for 127.0.0.1 at 2021-09-27 11:21:35 +0500
+Processing by Example22Controller#cross_site_scripting22 as HTML
+  Parameters: {"test1"=>"\"><tstXSS"}
+  Rendering example22/cross_site_scripting22.html.erb within layouts/application
+  Rendered example22/cross_site_scripting22.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 9ms (Views: 6.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/example22?test1=%22%3E%3CtestXSS" for 127.0.0.1 at 2021-09-27 11:21:45 +0500
+Processing by Example22Controller#cross_site_scripting22 as HTML
+  Parameters: {"test1"=>"\"><testXSS"}
+  Rendering example22/cross_site_scripting22.html.erb within layouts/application
+  Rendered example22/cross_site_scripting22.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 8ms (Views: 6.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/example22?test1=%22%3Etest" for 127.0.0.1 at 2021-09-27 11:21:53 +0500
+Processing by Example22Controller#cross_site_scripting22 as HTML
+  Parameters: {"test1"=>"\">test"}
+  Rendering example22/cross_site_scripting22.html.erb within layouts/application
+  Rendered example22/cross_site_scripting22.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 9ms (Views: 6.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/example22?test1=https://google.com" for 127.0.0.1 at 2021-09-27 11:22:05 +0500
+Processing by Example22Controller#cross_site_scripting22 as HTML
+  Parameters: {"test1"=>"https://google.com"}
+  Rendering example22/cross_site_scripting22.html.erb within layouts/application
+  Rendered example22/cross_site_scripting22.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 9ms (Views: 6.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/example22?test1=https://google.com/test.pdf" for 127.0.0.1 at 2021-09-27 11:23:07 +0500
+Processing by Example22Controller#cross_site_scripting22 as HTML
+  Parameters: {"test1"=>"https://google.com/test.pdf"}
+  Rendering example22/cross_site_scripting22.html.erb within layouts/application
+  Rendered example22/cross_site_scripting22.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 25ms (Views: 6.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/example22?test1=https://google.com/test.pdf?test=test" for 127.0.0.1 at 2021-09-27 11:24:09 +0500
+Processing by Example22Controller#cross_site_scripting22 as HTML
+  Parameters: {"test1"=>"https://google.com/test.pdf?test=test"}
+  Rendering example22/cross_site_scripting22.html.erb within layouts/application
+  Rendered example22/cross_site_scripting22.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 9ms (Views: 6.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/example22?test1=https://google.com/test.pdf?test=test" for 127.0.0.1 at 2021-09-27 12:42:04 +0500
+Processing by Example22Controller#cross_site_scripting22 as HTML
+  Parameters: {"test1"=>"https://google.com/test.pdf?test=test"}
+  Rendering example22/cross_site_scripting22.html.erb within layouts/application
+  Rendered example22/cross_site_scripting22.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 56ms (Views: 39.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/example22?test1=/uploads/activity_transaction/whiplash_pdf_file/325/1632727333_ARU5ch5eNwLGUzYzUQuGkw.pdf" for 127.0.0.1 at 2021-09-27 12:42:06 +0500
+Processing by Example22Controller#cross_site_scripting22 as HTML
+  Parameters: {"test1"=>"/uploads/activity_transaction/whiplash_pdf_file/325/1632727333_ARU5ch5eNwLGUzYzUQuGkw.pdf"}
+  Rendering example22/cross_site_scripting22.html.erb within layouts/application
+  Rendered example22/cross_site_scripting22.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 13ms (Views: 9.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/example22?test1=/uploads/activity_transaction/whiplash_pdf_file/325/1632727333_ARU5ch5eNwLGUzYzUQuGkw.pdf" for 127.0.0.1 at 2021-09-27 12:42:09 +0500
+Processing by Example22Controller#cross_site_scripting22 as HTML
+  Parameters: {"test1"=>"/uploads/activity_transaction/whiplash_pdf_file/325/1632727333_ARU5ch5eNwLGUzYzUQuGkw.pdf"}
+  Rendering example22/cross_site_scripting22.html.erb within layouts/application
+  Rendered example22/cross_site_scripting22.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 18ms (Views: 13.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/example22?xss=1" for 127.0.0.1 at 2021-09-28 10:30:39 +0500
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/hassankhan/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+Processing by Example22Controller#cross_site_scripting22 as HTML
+  Parameters: {"xss"=>"1"}
+  Rendering example22/cross_site_scripting22.html.erb within layouts/application
+  Rendered example22/cross_site_scripting22.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 131ms (Views: 126.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/example22?xss=%22-alert(1)-%22" for 127.0.0.1 at 2021-09-28 10:30:49 +0500
+Processing by Example22Controller#cross_site_scripting22 as HTML
+  Parameters: {"xss"=>"\"-alert(1)-\""}
+  Rendering example22/cross_site_scripting22.html.erb within layouts/application
+  Rendered example22/cross_site_scripting22.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 10ms (Views: 6.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/example22?xss=%27-alert(1)-%27" for 127.0.0.1 at 2021-09-28 10:31:09 +0500
+Processing by Example22Controller#cross_site_scripting22 as HTML
+  Parameters: {"xss"=>"'-alert(1)-'"}
+  Rendering example22/cross_site_scripting22.html.erb within layouts/application
+  Rendered example22/cross_site_scripting22.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 11ms (Views: 9.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/example22?xss=%27-alert(1)-%27" for 127.0.0.1 at 2021-09-28 10:31:19 +0500
+Processing by Example22Controller#cross_site_scripting22 as HTML
+  Parameters: {"xss"=>"'-alert(1)-'"}
+  Rendering example22/cross_site_scripting22.html.erb within layouts/application
+  Rendered example22/cross_site_scripting22.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 8ms (Views: 6.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/example22?xss=%27-alert(1)-%27" for 127.0.0.1 at 2021-09-28 10:31:44 +0500
+Processing by Example22Controller#cross_site_scripting22 as HTML
+  Parameters: {"xss"=>"'-alert(1)-'"}
+  Rendering example22/cross_site_scripting22.html.erb within layouts/application
+  Rendered example22/cross_site_scripting22.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 12ms (Views: 9.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/example22?xss=-alert(1)-" for 127.0.0.1 at 2021-09-28 10:31:51 +0500
+Processing by Example22Controller#cross_site_scripting22 as HTML
+  Parameters: {"xss"=>"-alert(1)-"}
+  Rendering example22/cross_site_scripting22.html.erb within layouts/application
+  Rendered example22/cross_site_scripting22.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 10ms (Views: 7.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/example22?xss=%27-alert(1)-%27" for 127.0.0.1 at 2021-09-28 10:32:03 +0500
+Processing by Example22Controller#cross_site_scripting22 as HTML
+  Parameters: {"xss"=>"'-alert(1)-'"}
+  Rendering example22/cross_site_scripting22.html.erb within layouts/application
+  Rendered example22/cross_site_scripting22.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 11ms (Views: 9.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/example22?xss=test" for 127.0.0.1 at 2021-09-28 10:33:52 +0500
+Processing by Example22Controller#cross_site_scripting22 as HTML
+  Parameters: {"xss"=>"test"}
+  Rendering example22/cross_site_scripting22.html.erb within layouts/application
+  Rendered example22/cross_site_scripting22.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 11ms (Views: 8.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/example22?xss=%22%3E%3CtestXSS" for 127.0.0.1 at 2021-09-28 10:34:00 +0500
+Processing by Example22Controller#cross_site_scripting22 as HTML
+  Parameters: {"xss"=>"\"><testXSS"}
+  Rendering example22/cross_site_scripting22.html.erb within layouts/application
+  Rendered example22/cross_site_scripting22.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 8ms (Views: 6.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/example22?xss=test" for 127.0.0.1 at 2021-09-28 10:34:55 +0500
+Processing by Example22Controller#cross_site_scripting22 as HTML
+  Parameters: {"xss"=>"test"}
+  Rendering example22/cross_site_scripting22.html.erb within layouts/application
+  Rendered example22/cross_site_scripting22.html.erb within layouts/application (10.4ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 4, expected 1..3)):
+    2: 
+    3: 
+    4: <%= sanitize_with_html_safe(@var, %w[h1], %w[style]) %>
+    5: <%= sanitize_with_html_safe(@var2, %w[h1], %w[style], %w[script]) %>
+  
+app/helpers/application_helper.rb:8:in `sanitize_with_html_safe'
+app/views/example22/cross_site_scripting22.html.erb:5:in `_app_views_example___cross_site_scripting___html_erb___1840094701760721449_70227253634320'
+Started GET "/example22?xss=test" for 127.0.0.1 at 2021-09-28 10:35:03 +0500
+Processing by Example22Controller#cross_site_scripting22 as HTML
+  Parameters: {"xss"=>"test"}
+  Rendering example22/cross_site_scripting22.html.erb within layouts/application
+  Rendered example22/cross_site_scripting22.html.erb within layouts/application (3.0ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 4, expected 1..3)):
+    2: 
+    3: 
+    4: <%= sanitize_with_html_safe(@var, %w[h1], %w[style]) %>
+    5: <%= sanitize_with_html_safe(@var2, %w[h1], %w[style], %w[script]) %>
+  
+app/helpers/application_helper.rb:8:in `sanitize_with_html_safe'
+app/views/example22/cross_site_scripting22.html.erb:5:in `_app_views_example___cross_site_scripting___html_erb___1840094701760721449_70227235502260'
+Started GET "/example22?xss=test" for 127.0.0.1 at 2021-09-28 10:36:08 +0500
+Processing by Example22Controller#cross_site_scripting22 as HTML
+  Parameters: {"xss"=>"test"}
+  Rendering example22/cross_site_scripting22.html.erb within layouts/application
+  Rendered example22/cross_site_scripting22.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 11ms (Views: 7.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/example22?xss=test" for 127.0.0.1 at 2021-09-28 10:36:13 +0500
+Processing by Example22Controller#cross_site_scripting22 as HTML
+  Parameters: {"xss"=>"test"}
+  Rendering example22/cross_site_scripting22.html.erb within layouts/application
+  Rendered example22/cross_site_scripting22.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 11ms (Views: 7.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/example22?xss=%3Cscript%3E" for 127.0.0.1 at 2021-09-28 10:36:18 +0500
+Processing by Example22Controller#cross_site_scripting22 as HTML
+  Parameters: {"xss"=>"<script>"}
+  Rendering example22/cross_site_scripting22.html.erb within layouts/application
+  Rendered example22/cross_site_scripting22.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 8ms (Views: 6.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/example22?xss=test" for 127.0.0.1 at 2021-09-28 10:37:14 +0500
+Processing by Example22Controller#cross_site_scripting22 as HTML
+  Parameters: {"xss"=>"test"}
+  Rendering example22/cross_site_scripting22.html.erb within layouts/application
+  Rendered example22/cross_site_scripting22.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 10ms (Views: 8.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/example22?xss=test" for 127.0.0.1 at 2021-09-28 10:37:22 +0500
+Processing by Example22Controller#cross_site_scripting22 as HTML
+  Parameters: {"xss"=>"test"}
+  Rendering example22/cross_site_scripting22.html.erb within layouts/application
+  Rendered example22/cross_site_scripting22.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 11ms (Views: 8.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/example22?xss=test" for 127.0.0.1 at 2021-09-28 10:38:00 +0500
+Processing by Example22Controller#cross_site_scripting22 as HTML
+  Parameters: {"xss"=>"test"}
+  Rendering example22/cross_site_scripting22.html.erb within layouts/application
+  Rendered example22/cross_site_scripting22.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 11ms (Views: 8.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/example22?xss=test" for 127.0.0.1 at 2021-09-28 10:38:25 +0500
+Processing by Example22Controller#cross_site_scripting22 as HTML
+  Parameters: {"xss"=>"test"}
+  Rendering example22/cross_site_scripting22.html.erb within layouts/application
+  Rendered example22/cross_site_scripting22.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 10ms (Views: 7.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/example22?xss=test" for 127.0.0.1 at 2021-09-28 10:38:57 +0500
+Processing by Example22Controller#cross_site_scripting22 as HTML
+  Parameters: {"xss"=>"test"}
+  Rendering example22/cross_site_scripting22.html.erb within layouts/application
+  Rendered example22/cross_site_scripting22.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 10ms (Views: 7.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/example22?xss=test" for 127.0.0.1 at 2021-09-28 10:39:05 +0500
+Processing by Example22Controller#cross_site_scripting22 as HTML
+  Parameters: {"xss"=>"test"}
+  Rendering example22/cross_site_scripting22.html.erb within layouts/application
+  Rendered example22/cross_site_scripting22.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 9ms (Views: 6.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/example22?xss=test" for 127.0.0.1 at 2021-09-28 10:54:59 +0500
+Processing by Example22Controller#cross_site_scripting22 as HTML
+  Parameters: {"xss"=>"test"}
+  Rendering example22/cross_site_scripting22.html.erb within layouts/application
+  Rendered example22/cross_site_scripting22.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 14ms (Views: 11.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-10-22 15:26:36 +0500
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/hassankhan/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 170ms (Views: 159.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-10-22 15:26:47 +0500
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 8ms (Views: 6.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/example22?xss=test" for 127.0.0.1 at 2021-10-22 16:06:14 +0500
+Processing by Example22Controller#cross_site_scripting22 as HTML
+  Parameters: {"xss"=>"test"}
+  Rendering example22/cross_site_scripting22.html.erb within layouts/application
+  Rendered example22/cross_site_scripting22.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 27ms (Views: 24.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/example22?xss=%3Ch1%3EXSS%3C/h1%3E" for 127.0.0.1 at 2021-10-22 16:06:28 +0500
+Processing by Example22Controller#cross_site_scripting22 as HTML
+  Parameters: {"xss"=>"<h1>XSS</h1>"}
+  Rendering example22/cross_site_scripting22.html.erb within layouts/application
+  Rendered example22/cross_site_scripting22.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 13ms (Views: 9.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/example22?test1=%3Ch1%3EXSS%3C/h1%3E" for 127.0.0.1 at 2021-10-22 16:06:39 +0500
+Processing by Example22Controller#cross_site_scripting22 as HTML
+  Parameters: {"test1"=>"<h1>XSS</h1>"}
+  Rendering example22/cross_site_scripting22.html.erb within layouts/application
+  Rendered example22/cross_site_scripting22.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 11ms (Views: 8.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/example22?test1=%22%3E%3Cimg%20src=x%20onerror=prompt(1)%3E" for 127.0.0.1 at 2021-10-22 16:06:51 +0500
+Processing by Example22Controller#cross_site_scripting22 as HTML
+  Parameters: {"test1"=>"\"><img src=x onerror=prompt(1)>"}
+  Rendering example22/cross_site_scripting22.html.erb within layouts/application
+  Rendered example22/cross_site_scripting22.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 10ms (Views: 7.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/example22?test1=&" for 127.0.0.1 at 2021-10-22 16:07:06 +0500
+Processing by Example22Controller#cross_site_scripting22 as HTML
+  Parameters: {"test1"=>""}
+  Rendering example22/cross_site_scripting22.html.erb within layouts/application
+  Rendered example22/cross_site_scripting22.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 14ms (Views: 10.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/example22?test1=&quot;&gt;&lt;img%20src=x%20onerror=prompt(1)&gt;" for 127.0.0.1 at 2021-10-22 16:07:15 +0500
+Processing by Example22Controller#cross_site_scripting22 as HTML
+  Parameters: {"test1"=>"", "quot"=>nil, "gt"=>nil, "lt"=>nil, "img src"=>"x onerror=prompt(1)"}
+  Rendering example22/cross_site_scripting22.html.erb within layouts/application
+  Rendered example22/cross_site_scripting22.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 9ms (Views: 6.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/example22?test1=&quot;&gt;&lt;img%20src=x%20onerror=prompt(1)&gt;" for 127.0.0.1 at 2021-10-22 16:07:19 +0500
+Processing by Example22Controller#cross_site_scripting22 as HTML
+  Parameters: {"test1"=>"", "quot"=>nil, "gt"=>nil, "lt"=>nil, "img src"=>"x onerror=prompt(1)"}
+  Rendering example22/cross_site_scripting22.html.erb within layouts/application
+  Rendered example22/cross_site_scripting22.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 9ms (Views: 7.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/example22?test1=%26quot%3B%26gt%3B%26lt%3Bimg%20src%3Dx%20onerror%3Dprompt%281%29%26gt%3B" for 127.0.0.1 at 2021-10-22 16:07:29 +0500
+Processing by Example22Controller#cross_site_scripting22 as HTML
+  Parameters: {"test1"=>"&quot;&gt;&lt;img src=x onerror=prompt(1)&gt;"}
+  Rendering example22/cross_site_scripting22.html.erb within layouts/application
+  Rendered example22/cross_site_scripting22.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 11ms (Views: 8.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/example22?test1=%26quot%3B%26gt%3B%26lt%3Bimg%20src%3Dx%20onerror%3Dprompt%281%29%26gt%3B" for 127.0.0.1 at 2021-10-22 16:07:32 +0500
+Processing by Example22Controller#cross_site_scripting22 as HTML
+  Parameters: {"test1"=>"&quot;&gt;&lt;img src=x onerror=prompt(1)&gt;"}
+  Rendering example22/cross_site_scripting22.html.erb within layouts/application
+  Rendered example22/cross_site_scripting22.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 9ms (Views: 7.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/example22?test1=%26%23x22%3B%26%23x3E%3B%26%23x3C%3Bimg%20src%3Dx%20onerror%3Dprompt%281%29%26%23x3E%3B" for 127.0.0.1 at 2021-10-22 16:07:58 +0500
+Processing by Example22Controller#cross_site_scripting22 as HTML
+  Parameters: {"test1"=>"&#x22;&#x3E;&#x3C;img src=x onerror=prompt(1)&#x3E;"}
+  Rendering example22/cross_site_scripting22.html.erb within layouts/application
+  Rendered example22/cross_site_scripting22.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 10ms (Views: 7.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/example22?test1=%26%23x22%3B%26%23x3E%3B%26%23x3C%3Bimg%20src%3Dx%20onerror%3Dprompt%281%29%26%23x3E%3B" for 127.0.0.1 at 2021-10-22 16:08:11 +0500
+Processing by Example22Controller#cross_site_scripting22 as HTML
+  Parameters: {"test1"=>"&#x22;&#x3E;&#x3C;img src=x onerror=prompt(1)&#x3E;"}
+  Rendering example22/cross_site_scripting22.html.erb within layouts/application
+  Rendered example22/cross_site_scripting22.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 11ms (Views: 8.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/example22?test1=%26%23x22%3B%26%23x3E%3B%26%23x3C%3Bimg%20src%3Dx%20onerror%3Dprompt%281%29%26%23x3E%3B" for 127.0.0.1 at 2021-10-22 16:08:16 +0500
+Processing by Example22Controller#cross_site_scripting22 as HTML
+  Parameters: {"test1"=>"&#x22;&#x3E;&#x3C;img src=x onerror=prompt(1)&#x3E;"}
+  Rendering example22/cross_site_scripting22.html.erb within layouts/application
+  Rendered example22/cross_site_scripting22.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 11ms (Views: 8.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/example22?test1=%26%23x22%3B%26%23x3E%3B%26%23x3C%3Bimg%20src%3Dx%20onerror%3Dprompt%281%29%26%23x3E%3B" for 127.0.0.1 at 2021-10-22 16:08:17 +0500
+Processing by Example22Controller#cross_site_scripting22 as HTML
+  Parameters: {"test1"=>"&#x22;&#x3E;&#x3C;img src=x onerror=prompt(1)&#x3E;"}
+  Rendering example22/cross_site_scripting22.html.erb within layouts/application
+  Rendered example22/cross_site_scripting22.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 12ms (Views: 7.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/example22?test1=tst" for 127.0.0.1 at 2021-10-22 16:08:33 +0500
+Processing by Example22Controller#cross_site_scripting22 as HTML
+  Parameters: {"test1"=>"tst"}
+  Rendering example22/cross_site_scripting22.html.erb within layouts/application
+  Rendered example22/cross_site_scripting22.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 9ms (Views: 6.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/example22?test1=%26%23x22%3B%26%23x3E%3B%26%23x3C%3Bimg%20src%3Dx%20onerror%3Dprompt%281%29%26%23x3E%3B" for 127.0.0.1 at 2021-10-22 16:08:36 +0500
+Processing by Example22Controller#cross_site_scripting22 as HTML
+  Parameters: {"test1"=>"&#x22;&#x3E;&#x3C;img src=x onerror=prompt(1)&#x3E;"}
+  Rendering example22/cross_site_scripting22.html.erb within layouts/application
+  Rendered example22/cross_site_scripting22.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 9ms (Views: 6.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/example22?test1=%26%23x22%3B%26%23x3E%3B%26%23x3C%3Bimg%20src%3Dx%20onerror%3Dprompt%281%29%26%23x3E%3B" for 127.0.0.1 at 2021-10-22 17:56:20 +0500
+Processing by Example22Controller#cross_site_scripting22 as HTML
+  Parameters: {"test1"=>"&#x22;&#x3E;&#x3C;img src=x onerror=prompt(1)&#x3E;"}
+  Rendering example22/cross_site_scripting22.html.erb within layouts/application
+  Rendered example22/cross_site_scripting22.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 12ms (Views: 8.8ms | ActiveRecord: 0.0ms)
+
+

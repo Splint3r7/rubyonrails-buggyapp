@@ -1,0 +1,2 @@
+module CrossSiteScriptingAllHelper
+end

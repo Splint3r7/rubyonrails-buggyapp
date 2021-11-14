@@ -15,6 +15,25 @@ class ChallangesController < ApplicationController
 
 		}
 		#render :motd
+		end
 	end
+
+	def mail
+		if params[:recipent].to_s =~ /^\w+@outlook.com\.com$/
+			#Email is model
+			mail = Email.create(rcpt: params[:recipient].to_s)
+			mail.send!
+		end
 	end
+
+
+	def authorize
+		if request.get?
+			render 'authorize'
+		else
+			authorize!
+		end
+	end
+
+
 end
