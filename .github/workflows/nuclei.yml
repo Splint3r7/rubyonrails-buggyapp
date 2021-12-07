@@ -3,23 +3,19 @@ name: Nuclei - DAST Scan
 on: push
 
 jobs:
-  nuclei-scan:
-    runs-on: ubuntu-latest
+  worker:
+    runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v2
 
-      - name: Nuclei - DAST Scan
-        uses: projectdiscovery/nuclei-action@main
+      - uses: actions/cache@v2
+        id: cache
+        with:
+          path: /home/runner/go/bin/nuclei
+          key: ${{ runner.os }}-${{ hashFiles('/home/runner/go/bin/nuclei') }}
+
+      - uses: projectdiscovery/nuclei-action@main
         with:
           target: http://e53d-59-103-104-32.ngrok.io
-
-      - name: GitHub Workflow artifacts
-        uses: actions/upload-artifact@v2
-        with:
-          name: nuclei.log
-          path: nuclei.log
-
-      - name: GitHub Security Dashboard Alerts update
-        uses: github/codeql-action/upload-sarif@v1
-        with:
-          sarif_file: nuclei.sarif
+          github-report: true
+          report-token: ${{ secrets.GITHUB_TOKEN }}
