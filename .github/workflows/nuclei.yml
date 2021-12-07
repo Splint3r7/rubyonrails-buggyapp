@@ -18,9 +18,8 @@ jobs:
 
       - uses: projectdiscovery/nuclei-action@main
         with:
-          name: projectdiscovery/nuclei-templates@master
           target: "http://e53d-59-103-104-32.ngrok.io"
-          templates: "nuclei-templates"
+          templates: projectdiscovery/nuclei-templates@master
           output: "nuclei.log"
 
       - uses: actions/upload-artifact@v2
