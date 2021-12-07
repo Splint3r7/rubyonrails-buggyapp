@@ -22,10 +22,10 @@ jobs:
         name: nuclei.log
         path: nuclei.log
         
-    - name: Send custom JSON data to Slack workflow
-      id: slack
-      uses: slackapi/slack-github-action@v1.16.0
+    - uses: indentinc/github-action-slack-notify@v1
       with:
-        payload: "{\"key\":\"value\",\"foo\":\"bar\"}"
+        status: ${{ job.status }}
+        author_name: Integration Test
       env:
-        SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
