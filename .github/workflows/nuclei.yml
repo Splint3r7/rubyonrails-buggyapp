@@ -9,7 +9,6 @@ jobs:
       - uses: actions/checkout@v2
         with:
           name: projectdiscovery/nuclei-templates@master
-          ref: refs/heads/release
       
       - uses: projectdiscovery/nuclei-action@main
 
