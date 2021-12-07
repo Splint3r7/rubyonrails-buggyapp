@@ -7,6 +7,11 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v2
+        with:
+          name: projectdiscovery/nuclei-templates
+          ref: refs/heads/release
+      
+      - uses: projectdiscovery/nuclei-action@main
 
       - uses: actions/cache@v2
         id: cache
