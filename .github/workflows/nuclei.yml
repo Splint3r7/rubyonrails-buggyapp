@@ -12,7 +12,7 @@ jobs:
       - name: Nuclei - DAST Scan
         uses: projectdiscovery/nuclei-action@main
         with:
-          target: github-actions/urls.txt
+          urls: "github-actions/urls.txt"
         
       - uses: actions/upload-artifact@v2
         with:
