@@ -16,6 +16,11 @@ jobs:
 
       - uses: projectdiscovery/nuclei-action@main
         with:
-          target: http://e53d-59-103-104-32.ngrok.io
-          github-report: true
-          report-token: ${{ secrets.GITHUB_TOKEN }}
+          target: "http://e53d-59-103-104-32.ngrok.io"
+          templates: "nuclei-templates"
+          output: "nuclei.log"
+
+      - uses: actions/upload-artifact@v2
+        with:
+          name: nuclei.log
+          path: nuclei.log
