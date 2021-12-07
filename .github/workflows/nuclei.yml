@@ -5,27 +5,24 @@ on: push
 jobs:
   nuclei-scan:
     runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-      matrix:
-        url:
-        - http://e53d-59-103-104-32.ngrok.io
+ 
     steps:
-    - name: Scan ${{ matrix.url }} with Nuclei
-      uses: projectdiscovery/nuclei-action@508c1868d4884e9fb6eb4d8d680cbc6b493c7ec5
-      with:
-        target: ${{ matrix.url }}
-        output: "nuclei.log"
+      - uses: actions/checkout@v2
+
+      - name: Nuclei - DAST Scan
+        uses: projectdiscovery/nuclei-action@main
+        with:
+          target: https://example.com
         
-    - uses: actions/upload-artifact@v2
-      with:
-        name: nuclei.log
-        path: nuclei.log
+      - uses: actions/upload-artifact@v2
+        with:
+          name: nuclei.log
+          path: nuclei.log
         
-    - uses: indentinc/github-action-slack-notify@master
-      with:
-        status: ${{ job.status }}
-        author_name: Vulnerability Assessment - Nuclei Scan
-      env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+      - uses: indentinc/github-action-slack-notify@master
+        with:
+          status: ${{ job.status }}
+          author_name: Vulnerability Assessment - Nuclei Scan
+        env:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
