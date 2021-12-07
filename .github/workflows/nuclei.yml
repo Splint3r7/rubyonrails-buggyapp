@@ -22,7 +22,7 @@ jobs:
         name: nuclei.log
         path: nuclei.log
         
-    - uses: indentinc/github-action-slack-notify@v1
+    - uses: indentinc/github-action-slack-notify@master
       with:
         status: ${{ job.status }}
         author_name: Integration Test
