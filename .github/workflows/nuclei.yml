@@ -1,28 +1,17 @@
-name: Nuclei - DAST Scan
+name: Nuclei Scan
 
 on: push
 
 jobs:
-  worker:
-    runs-on: ubuntu-20.04
+  nuclei-scan:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        url:
+        - http://e53d-59-103-104-32.ngrok.io
     steps:
-      - uses: actions/checkout@v2
-      
-      - uses: projectdiscovery/nuclei-action@main
-
-      - uses: actions/cache@v2
-        id: cache
-        with:
-          path: /home/runner/go/bin/nuclei
-          key: ${{ runner.os }}-${{ hashFiles('/home/runner/go/bin/nuclei') }}
-
-      - uses: projectdiscovery/nuclei-action@main
-        with:
-          target: "http://e53d-59-103-104-32.ngrok.io"
-          templates: projectdiscovery/nuclei-templates@master
-          output: "nuclei.log"
-
-      - uses: actions/upload-artifact@v2
-        with:
-          name: nuclei.log
-          path: nuclei.log
+    - name: Scan ${{ matrix.url }} with Nuclei
+      uses: projectdiscovery/nuclei-action@508c1868d4884e9fb6eb4d8d680cbc6b493c7ec5
+      with:
+        target: ${{ matrix.url }}
