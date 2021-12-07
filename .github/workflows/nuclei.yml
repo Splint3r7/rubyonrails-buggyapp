@@ -15,3 +15,9 @@ jobs:
       uses: projectdiscovery/nuclei-action@508c1868d4884e9fb6eb4d8d680cbc6b493c7ec5
       with:
         target: ${{ matrix.url }}
+        output: "nuclei.log"
+        
+    - uses: actions/upload-artifact@v2
+      with:
+        name: nuclei.log
+        path: nuclei.log
