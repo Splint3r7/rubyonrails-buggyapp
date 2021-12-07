@@ -7,8 +7,6 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v2
-        with:
-          name: projectdiscovery/nuclei-templates@master
       
       - uses: projectdiscovery/nuclei-action@main
 
@@ -20,6 +18,7 @@ jobs:
 
       - uses: projectdiscovery/nuclei-action@main
         with:
+          name: projectdiscovery/nuclei-templates@master
           target: "http://e53d-59-103-104-32.ngrok.io"
           templates: "nuclei-templates"
           output: "nuclei.log"
