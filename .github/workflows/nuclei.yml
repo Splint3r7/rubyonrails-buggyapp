@@ -1,9 +1,6 @@
 name: Nuclei Scan
 
-on:
-    schedule:
-      - cron: '* * * * *'
-    workflow_dispatch:
+on: push
 
 jobs:
   nuclei-scan:
