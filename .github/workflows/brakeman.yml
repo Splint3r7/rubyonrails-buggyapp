@@ -8,7 +8,7 @@ jobs:
     steps:
     - name: install gems
       run: |
-        gem install brakeman
+        sudo gem install brakeman
     - name: brakeman report
       run: |
         brakeman -f json > brakeman.json || exit 0
