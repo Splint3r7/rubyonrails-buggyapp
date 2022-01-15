@@ -1,0 +1,36 @@
+version: 2.1
+orbs:
+  ruby: circleci/ruby@0.1.2 
+
+jobs:
+  bunlder-audit-scanner:
+    machine:
+      image: circleci/node:lts-buster
+    
+    steps:
+      - checkout
+      - run:
+          name: bunlder audit Scan
+          command: gem install bundler-audit && bundler-audit || true
+
+  brakeman-scanner:
+    machine:
+      image: circleci/node:lts-buster
+
+    steps:
+      - checkout
+      - run:
+          name: brakeman
+          command: | 
+            gem install brakeman
+            mkdir -p security
+            brakeman . -o security/brakeman.html -f html || true
+
+      - store_artifacts:
+          path: security/brakeman.html
+
+workflows:
+  build_and_test:
+    jobs:
+      - bunlder-audit-scanner
+      - brakeman-scanner
