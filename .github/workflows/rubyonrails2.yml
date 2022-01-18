@@ -8,4 +8,4 @@ jobs:
   
     steps:
       - run: |
-          gem install brakeman && brakeman . || true
+          sodo gem install brakeman && brakeman . || true
