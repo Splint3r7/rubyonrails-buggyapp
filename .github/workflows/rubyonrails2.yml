@@ -1,0 +1,11 @@
+name: brakeman-scanner
+on: push
+
+jobs:
+  brakeman-scanner:
+    name: runner / brakeman
+    runs-on: ubuntu-latest
+  
+    steps:
+      - run: |
+          gem install brakeman && brakeman . || true
