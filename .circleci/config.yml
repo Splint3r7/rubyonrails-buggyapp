@@ -1,0 +1,19 @@
+version: 2.1
+orbs:
+  ruby: circleci/ruby@0.1.2 
+
+jobs:
+  bunlder-audit-scanner:
+    machine:
+        image: ubuntu-2004:202010-01
+  
+    steps:
+      - checkout
+      - run:
+          name: brakeman
+          command: gem install brakeman && brakeman . || true
+
+workflows:
+    build_and_test:
+      jobs:
+        - bunlder-audit-scanner
