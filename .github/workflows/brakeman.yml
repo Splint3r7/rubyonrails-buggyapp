@@ -1,19 +1,12 @@
-name: brakeman
-on: push
-          
+
+name: brakeman-scanner
+on: [pull_request]
+
 jobs:
-  brakeman:      
-    name: Ruocop Action
+  brakeman-scanner:
+    name: runner / brakeman
     runs-on: ubuntu-latest
+  
     steps:
-    - name: install gems
-      run: |
-        sudo gem install brakeman
-    - name: brakeman report
-      run: |
-        brakeman . -f json > brakeman.json || exit 0
-    - name: Brakeman
-      uses: devmasx/brakeman-linter-action@v1.0.0
-      env:
-        GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-        REPORT_PATH: brakeman.json
+      - run: |
+          gem install brakeman && brakeman . || true
